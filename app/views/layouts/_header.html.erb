@@ -1,8 +1,12 @@
 <nav>
 	<%= link_to(image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo"), "/") %>
 
-	<%= link_to'News', id: "nav_link", controller: 'articles', id: "nav_link" %>
-	<%= link_to 'Sign In', new_user_path, id: "nav_link" %> 
+
+	<%= button_to 'Brand & Launch Excellence', class: "nav_link" %>
+	<%= button_to 'Insight Market Research', class: "nav_link" %>
+	<%= button_to 'Market Access', class: "nav_link" %>
+	<%= button_to 'News', controller: 'articles', class: "nav_link" %>
+	<%= button_to 'Sign In', new_user_path, method: :get, class: "nav_link" %> 
 
 
 </nav>
