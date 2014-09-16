@@ -1,5 +1,27 @@
 Rails.application.routes.draw do
 
+  get 'about/history'
+
+  get 'about/vision'
+
+  get 'about/team'
+
+  get 'ma/services'
+
+  get 'ma/cs'
+
+  get 'imr/services'
+
+  get 'imr/cs'
+
+  get 'ble/services'
+
+  get 'ble/cs'
+
+  get 'static/contact'
+
+  get 'static/sitemap'
+
 resources :users
 
   # devise_for :users
