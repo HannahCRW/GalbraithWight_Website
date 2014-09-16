@@ -17,4 +17,19 @@
  body {
  	color: #030864;
  	background-color: #fff;
+ 	margin: 0;
+ }
+
+ nav {
+ 	background-color: #b6caf9;
+ 	margin: 0;
+ }
+
+ #logo {
+ 	width: 500px;
+ }
+
+ #nav_link {
+ 	background-color: yellow;
+ 	font-size: 51px;
  }

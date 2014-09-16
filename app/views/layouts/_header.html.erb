@@ -1,1 +1,8 @@
-This is the header
+<nav>
+	<%= image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo") %>
+
+	<%= link_to 'News', id: "nav_link", controller: 'articles' %>
+	<%= link_to 'Sign In', new_user_path, id: "nav_link" %> 
+
+
+</nav>
