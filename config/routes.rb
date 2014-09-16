@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'news/index'
-    resources :articles
+    resources :articles do
+      resources :comments
+    end
 
-  match ':controller(/:action/(:id))', :via => [:get, :post, :patch]
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
