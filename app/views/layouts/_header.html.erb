@@ -1,7 +1,7 @@
 <nav>
-	<%= image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo") %>
+	<%= link_to(image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo"), "/") %>
 
-	<%= link_to 'News', id: "nav_link", controller: 'articles' %>
+	<%= link_to'News', id: "nav_link", controller: 'articles', id: "nav_link" %>
 	<%= link_to 'Sign In', new_user_path, id: "nav_link" %> 
 
 
