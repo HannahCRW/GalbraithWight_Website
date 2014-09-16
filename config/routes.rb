@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get 'user/new'
 
-  get 'user/create'
-
-  get 'user/edit'
-
-  get 'user/delete'
+resources :users
 
   # devise_for :users
   root 'home#index'
