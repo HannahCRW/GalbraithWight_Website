@@ -1,12 +1,15 @@
 <nav>
+<div id="colour_bar">
+</div>
+<div id="logo_div">
 	<%= link_to(image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo"), "/") %>
-
-
-	<%= button_to 'Brand & Launch Excellence', ble_services_path, class: "nav_link" %>
-	<%= button_to 'Insight Market Research', imr_services_path, class: "nav_link" %>
-	<%= button_to 'Market Access', ma_services_path , class: "nav_link" %>
-	<%= button_to 'News', articles_path, class: "nav_link" %>
+</div>
+<div id="buttons_div">
+	<%= button_to 'Brand & Launch Excellence', ble_services_path, method: :get, class: "nav_link" %>
+	<%= button_to 'Insight Market Research', imr_services_path, method: :get, class: "nav_link" %>
+	<%= button_to 'Market Access', ma_services_path, method: :get, class: "nav_link" %>
+	<%= button_to 'News', articles_path, method: :get, class: "nav_link" %>
 	<%= button_to 'Sign In', new_user_path, method: :get, class: "nav_link" %> 
-
+</div>
 
 </nav>
