@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/edit'
+
+  get 'user/delete'
+
   # devise_for :users
   root 'home#index'
 

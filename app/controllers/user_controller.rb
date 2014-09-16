@@ -1,6 +1,5 @@
 class UserController < ApplicationController
-
-	def new
+  	def new
 		@user = User.new
 	end
 
@@ -13,6 +12,11 @@ class UserController < ApplicationController
 		end
 	end
 
+ 	def edit
+ 	end
+
+ 	def delete
+ 	end
 
 	private
 	def user_params
