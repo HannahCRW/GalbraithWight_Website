@@ -46,8 +46,9 @@
 
  #buttons_div {
  	margin-top: 25px;
+ 	padding-left: 1.5%;
  	width: 100%;
- 	background-color: rgba(255,255,255,0.7);
+ 	background-color: rgba(255,255,255,0);
  	height: 80px;
  }
 
@@ -55,17 +56,17 @@
  	background-color: #82abd9;
  	font-family: 'Oxygen', sans-serif;
  	font-size: 14px;
- 	width: 19%;
- 	min-width: 150px;
+ 	width: 18%;
+ 	min-width: 186px;
  	height: 55px;
- 	margin: 15px 5px 0 7px;
+ 	margin: 15px 10px 0 7px;
  	float: left;
  	-webkit-border-radius: 5px;
  	-moz-border-radius: 5px;
  	-webkit-box-shadow: none;
  	-moz-box-shadow: none;
  	box-shadow: none;
- 	border-color: none;
+ 	border-color: transparent;
  }
 
  .nav_link:hover {
