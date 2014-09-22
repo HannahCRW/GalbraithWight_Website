@@ -3,11 +3,22 @@
 <div id="logo_div">
 	<%= link_to(image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo"), "/") %>
 </div>
+<div class="navbar-text pull-right">
+	<% if user_signed_in? %>
+	  Welcome, <strong><%= current_user.first_name %></strong>.
+	  <%= link_to 'Edit profile', edit_user_path, :class => 'navbar-link' %> |
+	  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	<% else %>
+	  <%= link_to "Sign up", new_user_path, :class => 'navbar-link'  %> |
+	  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+	<% end %>
+</div>
 <div id="buttons_div">
+	<%= button_to 'Market Access', ma_services_path, method: :get, class: "nav_link" %>
 	<%= button_to 'Brand & Launch Excellence', ble_services_path, method: :get, class: "nav_link" %>
 	<%= button_to 'Insight Market Research', imr_services_path, method: :get, class: "nav_link" %>
-	<%= button_to 'Market Access', ma_services_path, method: :get, class: "nav_link" %>
 	<%= button_to 'News', articles_path, method: :get, class: "nav_link" %>
+	<%= button_to 'Contact Us', static_contact_path, method: :get, class: "nav_link" %>
 	<%= button_to 'Client Area', new_user_path, method: :get, class: "nav_link" %> 
 </div>
 
