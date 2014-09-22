@@ -12,6 +12,10 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def index
+		@user = User.find(user_params)
+	end
+
  	def edit
  	end
 
