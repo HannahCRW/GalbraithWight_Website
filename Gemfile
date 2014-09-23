@@ -44,3 +44,7 @@ gem 'devise'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 gem 'omniauth'
+
+gem 'omniauth-linkedin-oauth2'
+
+gem 'omniauth-openid'
