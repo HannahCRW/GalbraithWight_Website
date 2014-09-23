@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  # root 'home#index'
-
   get 'about/history'
 
   get 'about/vision'
