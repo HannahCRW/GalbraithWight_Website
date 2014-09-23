@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get 'static/sitemap'
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+
 resources :users
 
   devise_for :users
