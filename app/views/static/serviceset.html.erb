@@ -1,18 +1,30 @@
 <body>
-
-	<div id="services_summary">
-		<div id="ma_overview_box">
-			<%= link_to(image_tag("graph.jpg", id: "maccess_image", alt: "market access image"), ma_services_path, method: :get) %>
-		</div>
-		<div id="imr_overview_box">
-			<%= link_to(image_tag("lightbulb_2.jpg", id: "insight_image", alt: "insight image"), imr_services_path, method: :get) %>
-		</div>
-		<div id="ble_overview_box">
-			<%= link_to(image_tag("excellence_def.jpg", id: "excellence_image", alt: "excellence image"), ble_services_path, method: :get) %>
-		</div>
-		<div id="bussch_overview_box">
-			<%= link_to(image_tag("stocks_analysis.jpg", id: "bussch_image", alt: "business school image"), ble_services_path, method: :get) %>
+	<div id="surround">
+		<div id="services_summary">
+			<div id="ma_overview_box">
+				<%= link_to(image_tag("graph.jpg", id: "maccess_image", alt: "market access image"), ma_services_path, 	method: :get) %>
+				<div class="overview_text">
+					Market Access
+				</div>
+			</div>
+			<div id="imr_overview_box">
+				<%= link_to(image_tag("lightbulb_2.jpg", id: "insight_image", alt: "insight image"), imr_services_path, 	method: :get) %>
+				<div class="overview_text">
+					Insight<br>Market Research
+				</div>
+			</div>
+			<div id="ble_overview_box">
+				<%= link_to(image_tag("excellence_def.jpg", id: "excellence_image", alt: "excellence image"), 	ble_services_path, method: :get) %>
+				<div class="overview_text">
+					Brand &amp; Launch<br>Excellence
+				</div>
+			</div>
+			<div id="bussch_overview_box">
+				<%= link_to(image_tag("stocks_analysis.jpg", id: "bussch_image", alt: "business school image"), 	ble_services_path, method: :get) %>
+				<div class="overview_text">
+					GalbraithWight<br>Business School
+				</div>
+			</div>
 		</div>
 	</div>
-
 </body>
