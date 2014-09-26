@@ -235,33 +235,53 @@ strong {
 /*SERVICE SET*/
 
 #services_summary {
-	height: 325px;
+	height: 245px;
 	width: 100%;
 	background-color: rgba(255,255,255,0.7);
 }
 
 #services_summary div {
-	height: 80%;
-	width: 22%;
+	height: 100%;
+	width: 25%;
 	float: left;
 	text-align: center;
-	padding: 15px;
-	margin-left: 3.5px;
-	margin-right: 3.5px;
-	margin-top: 1.3%;
 }
 
 #ma_overview_box {
 }
+	#maccess_image {
+		width: 100%;
+		height: 245px;
+		position: relative;
+		z-index: 100;
+	}
 
 #imr_overview_box {
 }
+	#insight_image {
+		width: 100%;
+		height: 245px;
+		position: relative;
+		z-index: 100;
+	}
 
 #ble_overview_box {
 }
+	#excellence_image {
+		width: 100%;
+		height: 245px;
+		position: relative;
+		z-index: 100;
+	}
 
 #bussch_overview_box {
 }
+	#bussch_image {
+		width: 100%;
+		height: 245px;
+		position: relative;
+		z-index: 100;
+	}
 
 
 section {
