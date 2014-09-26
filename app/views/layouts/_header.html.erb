@@ -11,12 +11,13 @@
 			<% else %>
 			  <%= link_to "Sign up", new_user_path, :class => 'navbar-link'  %> |
 			  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+				to Client Area
 			<% end %>
 		</div>
 
 	</div>
 	
-	
+
 	<div id="buttons_div">
 		<%= button_to 'Market Access', ma_services_path, method: :get, class: "nav_link" %>
 		<%= button_to 'Brand & Launch Excellence', ble_services_path, method: :get, class: "nav_link" %>
