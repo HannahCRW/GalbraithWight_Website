@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'about/overview'
+
+  get 'static/serviceset'
+
   get 'about/history'
 
   get 'about/vision'

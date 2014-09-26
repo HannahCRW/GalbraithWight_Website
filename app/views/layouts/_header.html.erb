@@ -19,13 +19,10 @@
 	
 
 	<div id="buttons_div">
-		<%= button_to 'Market Access', ma_services_path, method: :get, class: "nav_link" %>
-		<%= button_to 'Brand & Launch Excellence', ble_services_path, method: :get, class: "nav_link" %>
-		<%= button_to 'Insight Market Research', imr_services_path, method: :get, class: "nav_link" %>
-		<%= button_to 'News', articles_path, method: :get, class: "nav_link" %>
+		<%= button_to 'Service Set', static_serviceset_path, method: :get, class: "nav_link" %>
+		<%= button_to 'About GalbraithWight', about_overview_path, method: :get, class: "nav_link" %>
+		<%= button_to 'Latest News', articles_path, method: :get, class: "nav_link" %>
 		<%= button_to 'Contact Us', static_contact_path, method: :get, class: "nav_link" %>
-		<%= button_to 'Client Area', new_user_path, method: :get, class: "nav_link" %> 
-		<!-- needs to be one for Business School -->
 	</div>
 
 </nav>
