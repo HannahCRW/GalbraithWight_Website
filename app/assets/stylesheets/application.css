@@ -346,11 +346,11 @@ strong {
 	float: left;
 	position: relative;
 	z-index: 500;
-	margin-top: 50px;
-	margin-bottom: -100px;
+	margin-top: 25%;
+	margin-bottom: -75px;
 	color: #fff;
 	width: 100%;
-	height: 50%;
+	height: 25%;
 	text-align: center;
 }
 
@@ -358,11 +358,11 @@ strong {
 	float: left;
 	position: relative;
 	z-index: 500;
-	margin-bottom: -250px;
-	margin-top: 150px;
+	margin-top: 25px;
+	margin-bottom: -200px;
 	color: #fff;
 	width: 100%;
-	height: 50%;
+	height: 25%;
 	text-align: center;
 }
 
