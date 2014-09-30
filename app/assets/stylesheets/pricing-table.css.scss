@@ -1,0 +1,100 @@
+.plan_features:nth-child(odd){
+    background: none repeat scroll 0 0 #CCDBB3;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 5px;
+
+}
+.plan_features:nth-child(even){
+    background: none repeat scroll 0 0 #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+.plan_price{
+
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 30px;
+    text-align: center;
+}
+dd.plan_price {
+	margin-left:0px;
+}
+#pricing_plan1 .plan_price{
+    background: none repeat scroll 0 0 #4E4D4A;
+    border-top: 1px solid #4E4A2A;
+}
+#pricing_plan2 .plan_price{
+    background: none repeat scroll 0 0 #4E4D4A;
+    border-top: 1px solid #4E4A2A;
+}
+#pricing_plan3 .plan_price{
+    background: none repeat scroll 0 0 #94BA65;
+    border-top: 1px solid #94B145;
+}
+#pricing_plan4 .plan_price{
+    background: none repeat scroll 0 0 #4E4D4A;
+    border-top: 1px solid #4E4A2A;
+}
+
+.plan_title{
+    background: none repeat scroll 0 0 #2790B0;
+    border-radius: 3px 3px 0 0;
+    color: #FFFFFF;
+    font-family: helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #5E5858;
+}
+.plan{
+    border:1px solid #eee;
+    margin-bottom: 15px;
+}
+.plan_buy{
+    background: none repeat scroll 0 0 #2B4E72;
+    border-radius: 0 0 3px 3px;
+    padding: 20px;
+}
+.plan_buy a{
+
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 90px;
+}
+.plan_more{
+    background: none repeat scroll 0 0 #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 5px;
+    display: none;
+    border-left: 2px solid #302C2C;
+    border-right: 2px solid #302C2C;
+    border-bottom: 2px solid #302C2C;
+}
+
+
+.feature_desc{
+    color: #4E4E4E;
+    text-align: center;
+}
+
+.highlight{
+    color: #333233;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+dd {
+margin-left: 0px;
+}
