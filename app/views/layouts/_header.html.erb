@@ -1,3 +1,6 @@
+<%= javascript_include_tag "application" %>
+
+
   <!-- header -->
   <div id="header">
     <!-- Logo and slogan -->
@@ -9,18 +12,18 @@
     <!-- desktop menu -->
     <div id="top-menu-horizontal">
       <ul class="nav pull-right hidden-phone hidden-tablet">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Features</a>
-          <ul class="dropdown-menu">
-            <li><a href="FAQ.html">Faq</a></li>
-            <li><a href="typography.html">Typography</a></li>
-            <li class="divider"></li>
-            <li><a href="pricing-table.html">Pricing table</a></li>
-          </ul>
-        </li>
-        <li class="active"><a href="about.html">About us</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      	<li> <%= link_to "Home", "/" %> </li>
+      	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+      		<ul class="dropdown-menu">
+      			<li> <%= link_to "Market Access", ma_services_path %> </li>
+      			<li> <%= link_to "Insight Market Research", imr_services_path %> </li>
+      			<li> <%= link_to "Brand & Launch Excellence", ble_services_path %> </li>
+      			<li> <%= link_to "Business School", "/" %> </li>
+      		</ul>
+      	</li>
+      	<li> <%= link_to "Contact Us", static_contact_path %> </li>
+      	<li> <%= link_to "About Us", about_overview_path %> </li>
+      	<li> <%= link_to "Login", new_user_path %> </li>
       </ul>
     </div>
     <!-- end desktop menu -->
@@ -51,4 +54,3 @@
       </div>
     </div>
     <!-- End  menu tablet and phone-->
-    

@@ -48,3 +48,5 @@ gem 'omniauth'
 gem 'omniauth-linkedin-oauth2'
 
 gem 'omniauth-openid'
+
+gem 'twitter-bootstrap-rails', group: :assets
