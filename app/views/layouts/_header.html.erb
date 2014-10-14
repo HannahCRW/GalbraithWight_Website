@@ -1,28 +1,54 @@
-<nav>
-
-	<div id="logo_div">
-		<%= link_to(image_tag("GW_logo_rethinking.png", id: "logo", alt: "GW Logo"), "/") %>
-	
-		<div class="navbar-text pull-right">
-			<% if user_signed_in? %>
-			  Welcome, <strong><%= current_user.first_name %></strong>.
-			  <%= link_to 'Edit profile', edit_user_path, :class => 'navbar-link' %> |
-			  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-			<% else %>
-			  <%= link_to "Sign up", new_user_path, :class => 'navbar-link'  %> |
-			  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-				to Client Area
-			<% end %>
-		</div>
-
-	</div>
-	
-
-	<div id="buttons_div">
-		<%= button_to 'Service Set', static_serviceset_path, method: :get, class: "nav_link" %>
-		<%= button_to 'About GalbraithWight', about_overview_path, method: :get, class: "nav_link" %>
-		<%= button_to 'Latest News', articles_path, method: :get, class: "nav_link" %>
-		<%= button_to 'Contact Us', static_contact_path, method: :get, class: "nav_link" %>
-	</div>
-
-</nav>
+  <!-- header -->
+  <div id="header">
+    <!-- Logo and slogan -->
+    <div id="brand">
+      <div id="logo" class="brand"></div>
+      <div id="slogan" class="hidden-phone">Clean and responsive design</div>
+    </div>
+    <!-- End Logo and slogan -->
+    <!-- desktop menu -->
+    <div id="top-menu-horizontal">
+      <ul class="nav pull-right hidden-phone hidden-tablet">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Features</a>
+          <ul class="dropdown-menu">
+            <li><a href="FAQ.html">Faq</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li class="divider"></li>
+            <li><a href="pricing-table.html">Pricing table</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- end desktop menu -->
+  </div>
+  <!-- end header -->
+  <div class="container">
+    <!-- Menu for tablet and phone-->
+    <div class="navbar navbar-inverse hidden-desktop row">
+      <div class="navbar-inner span12">
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class=" icon-chevron-down"></span> </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Features</a>
+                <ul class="dropdown-menu">
+                  <li><a href="FAQ.html">Faq</a></li>
+                  <li><a href="typography.html">Typography</a></li>
+                  <li class="divider"></li>
+                  <li><a href="pricing-table.html">Pricing table</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End  menu tablet and phone-->
+    

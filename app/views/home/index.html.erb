@@ -1,84 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GalbraithWight Ltd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="railscom">
+<!-- styles -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/bootstrap-responsive.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/flexslider.css" />
+<link href="css/lightbox.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/style-responsive.css" rel="stylesheet" />
+<!-- end styles -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="img/favicon.png">
+<!-- End Fav and touch icons -->
+</head>
 <body>
-	<div id="section_holder">
-		<div id="about_gw_box">
-			<strong> Welcome to GalbraithWight </strong>
-			<div id="welcome_text">
-			<%= image_tag "GW_eye.jpg", id: "eye_pic" %>
+<!-- Horizontal line -->
+<div id="header-line"></div>
+<!-- End Horizontal line -->
+<!-- main -->
+<div id="main" class="container">
+    <!-- Carousel -->
+    <div id="carousel">
+      <div id="flexslider" class="flexslider">
+        <ul class="slides carousel-inner">
+          <li class="item" > <img src="images/22.jpg" alt="image" />
+            <div class="carousel-caption hidden-phone">
+              <h4>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h4>
+              <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
+            </div>
+          </li>
+          <li class="item" > <img src="images/33.jpg" alt="image" />
+            <div class="carousel-caption hidden-phone">
+              <h4>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h4>
+              <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
+            </div>
+          </li>
+          <li class="item" > <img src="images/11.jpg" alt="image" />
+            <div class="carousel-caption hidden-phone">
+              <h4>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h4>
+              <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End carousel -->
+    <!-- First Section -->
+    <div class="row-fluid row-green">
+      <div class="span4">
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </div>
+      <div class="span8">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+      </div>
+    </div>
+    <!-- First section -->
+    <!-- Second Section -->
+    <div class="row-fluid">
+      <div class="span4 section-box">
+        <h4 class="section-heading">Lorem Ipsum</h4>
+        <img  src="images/business-33.jpg" alt="image" />
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span4 section-box-->
+      <div class="span4 section-box">
+        <h4 class="section-heading">Amet Mauris</h4>
+        <img src="images/business-11.jpg" alt="image" >
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span4 section-box-->
+      <div class="span4 section-box">
+        <h4 class="section-heading">Duis mollis</h4>
+        <img src="images/business-22.jpg" alt="image" >
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span4 section-box-->
+    </div>
+    <!-- End  second section-->
+    <div class="clearfix"></div>
+    <!-- Latest project section -->
+    <div class="row">
+      <div class="span12">
+        <h4 class="section-heading">Latest projects</h4>
+      </div>
+      <div class="span3 section-box">
+        <div class="preview"> <img  src="images/Project-1.jpg" class="img-polaroid" style="width:96%;" alt="image" >
+          <div class="overlay"> <a href="images/Project-1.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
+        </div>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span3 -->
+      <div class="span3 section-box">
+        <div class="preview"> <img  src="images/Project-2.jpg" class="img-polaroid" style="width:96%;" alt="image" >
+          <div class="overlay"> <a href="images/Project-2.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
+        </div>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span3 -->
+      <div class="span3 section-box">
+        <div class="preview"> <img  src="images/Project-3.jpg" class="img-polaroid" style="width:96%;" alt="image" >
+          <div class="overlay"> <a href="images/Project-3.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
+        </div>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span3 -->
+      <div class="span3 section-box">
+        <div class="preview"> <img  src="images/Project-4.jpg" class="img-polaroid" style="width:96%;" alt="image" >
+          <div class="overlay"> <a href="images/Project-4.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
+        </div>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
+      </div>
+      <!-- end span3 -->
+    </div>
+    <!-- End Latest project section -->
+    <!-- Our friends section -->
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h4 class="section-heading">Our Clients</h4>
+        </div>
+        <div class="span12">
+          <div id="flex-clients" class="flexslider">
+            <ul class="slides">
+              <li class="item"> <img src="images/logo-1.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-2.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-3.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-4.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-5.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-6.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-7.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-8.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-5.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-4.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-6.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-3.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-7.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-2.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-8.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-1.jpg"  alt="image" /> </li>
+              <li class="item"> <img src="images/logo-6.jpg"  alt="image" /> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Our friends section -->
+  </div>
+  <!-- End Container -->
+</div>
+<!-- end main -->
 
-			"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-			<br><%= link_to "Find out more about GalbraithWight here", about_history_path %>
-			</div>
-		</div>
+<!--  javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/holder.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundpos.js"></script>
+<script type="text/javascript" src="js/custom.js">
 
-
-		<div id="login_box">
-			<strong> Sign In </strong>
-			<div id="small_login_form">
-
-				<%= form_for User.new do |f| %>
-					<p>
-						<%= f.label :email %><br>
-						<%= f.email_field :email %>
-					</p>
-					<p>
-						<%= f.label :password %>
-						<%= f.password_field :password %>
-					</p>
-					<p>
-						<%= f.submit %>
-					</p>
-				<% end %>
-				
-				Not registered yet? &nbsp; <%= link_to "Sign up here.", new_user_path %>
-			</div>
-		</div>
-
-
-		<div id="latest_news_box">
-		<strong> <%= link_to "Latest News", articles_path %> </strong>
-			<div class="news_article">
-				<div class="article_headline">
-					Article 1
-				</div>
-				<div class="article_author">
-					Author Bloggs
-				</div>
-				<div class="article_body">
-					Lorem ipsum dolor sit amet.  Here is some more continuing text to make sure it wraps in the div as it should.  <br><%= link_to "Read more...", "home#index" %>  
-					<!-- Read more currently set to root until I have set up this feed to take articles from actual news database -->
-				</div>
-			</div>
-			<div class="news_article">
-				<div class="article_headline">
-					Article 2 
-				</div>
-				<div class="article_author">
-					Author Bloggs
-				</div>
-				<div class="article_body">
-					Lorem ipsum dolor sit amet
-					<br><br><%= link_to "Read more...", "home#index" %>  
-				</div>
-			</div>
-			<div class="news_article">
-				<div class="article_headline">
-					Article 3
-				</div>
-				<div class="article_author">
-					Author Bloggs
-				</div>
-				<div class="article_body">
-					Lorem ipsum dolor sit amet
-					<br><br><%= link_to "Read more...", "home#index" %>  
-				</div>
-			</div>
-		</div>
-
-
-		<div id="contact_box">
-			<strong> Contact Us </strong>
-			<br>phone and email details and link to main contact page
-		</div>
-
-	</div>
+</script>
 </body>
+</html>
