@@ -5913,6 +5913,7 @@ a.badge:hover {
 }
 
 .carousel-inner > .item > img {
+	height: auto;
   display: block;
   line-height: 1;
 }
@@ -5930,6 +5931,7 @@ a.badge:hover {
 .carousel-inner > .next,
 .carousel-inner > .prev {
   position: absolute;
+  z-index: 1000;
   top: 0;
   width: 100%;
 }
@@ -5945,6 +5947,8 @@ a.badge:hover {
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
   left: 0;
+  position: absolute;
+  z-index: 1000;
 }
 
 .carousel-inner > .active.left {
@@ -7269,29 +7273,18 @@ html[xmlns] .slides {
 }
 .flex-direction-nav .flex-next {
 	background:  url(../images/flex-next.png ) no-repeat 0px 0px;
-	width: 32px;
-	height: 32px;
+	width: 100px;
+	height: 500px;
 	background-position: 100% 0px;
+	margin-top: -200px;
 }
 .flex-direction-nav .flex-prev {
 	background: url(../images/flex-prev.png ) no-repeat 0px 0px;
-	width: 32px;
-	height: 32px;
+	width: 100px;
+	height: 500px;
+	margin-top: -200px;
 }
-.flexslider:hover .flex-next {
-	right: 5px;
-	opacity: 0.8;
-}
-.flexslider:hover .flex-prev {
-	left: 5px;
-	opacity: 0.8;
-}
-.flexslider:hover .flex-next:hover {
-	opacity: 1;
-}
-.flexslider:hover .flex-prev:hover {
-	opacity: 1;
-}
+
 .flex-direction-nav .flex-disabled {
 	filter: alpha(opacity=30);
 	cursor: default;
@@ -7500,6 +7493,8 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 #header-line {
 	background: 0px 0px rgb(43, 78, 114);
 	height: 6px;
+	width: 110%;
+	margin-left: -5%;
 }
 /* === Header Section === */
 #header {
@@ -7511,15 +7506,16 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	float:left;
 }
 #logo {
-	background-image:url(../images/GW_logo_rethinking.png);
-	background-repeat:no-repeat;
-	background-position: 20px 0px;
 	min-width:157px;
 	height:48px;
-	margin: 19px 10px 2px 0px;
+	margin: 20px;
 	padding-bottom:2px;
 	padding-left:5px;
 	float: left;
+}
+
+.gwlogorethinking {
+	width: 250px;
 }
 
 .home_logo {
@@ -7531,8 +7527,8 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	text-align:left;
 	padding-left:25px;
 	color: #4E4D4A;
-	font-size: 15px;
-	margin-top: 32px;
+	font-size: 13px;
+	margin-top: 37px;
 	margin-left: 15px;
 	border-left-color: rgb(225, 225, 225);
 	border-left-width: 1px;
@@ -7955,6 +7951,11 @@ h4.section-heading {
 p.section-heading{
 	padding:5px;
 }
+
+.sectionimage {
+	width: auto;
+}
+
 .sub-section-image {
 	margin-top: -120px;
 }

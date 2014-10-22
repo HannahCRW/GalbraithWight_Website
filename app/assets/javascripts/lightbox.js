@@ -98,9 +98,9 @@ lightbox = new Lightbox options
 
     function LightboxOptions() {
 
-      this.fileLoadingImage = 'images/loading.gif';
+      this.fileLoadingImage = '../images/loading.gif';
 
-      this.fileCloseImage = 'images/close.png';
+      this.fileCloseImage = '../images/close.png';
 
       this.resizeDuration = 700;
 

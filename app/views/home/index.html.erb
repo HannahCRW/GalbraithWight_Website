@@ -8,12 +8,6 @@
 <meta name="author" content="railscom">
 <!-- styles -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css" />
-<link href="css/bootstrap.css" rel="stylesheet" />
-<link href="css/bootstrap-responsive.css" rel="stylesheet" />
-<link rel="stylesheet" href="css/flexslider.css" />
-<link href="css/lightbox.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet" />
-<link href="css/style-responsive.css" rel="stylesheet" />
 <!-- end styles -->
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -37,21 +31,27 @@
     <div id="carousel">
       <div id="flexslider" class="flexslider">
         <ul class="slides carousel-inner">
-          <li class="item" > <img src="images/22.jpg" alt="image" />
+          <li class="item" > <%= image_tag "graph_short.jpg" %>
             <div class="carousel-caption hidden-phone">
-              <h4>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h4>
+              <h4>Market Access</h4>
               <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
             </div>
           </li>
-          <li class="item" > <img src="images/33.jpg" alt="image" />
+          <li class="item" > <%= image_tag "planet_1_short.jpg" %>
             <div class="carousel-caption hidden-phone">
-              <h4>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h4>
+              <h4>Insight Market Research</h4>
               <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
             </div>
           </li>
-          <li class="item" > <img src="images/11.jpg" alt="image" />
+          <li class="item" > <%= image_tag "excellence_def_short.jpg" %>
             <div class="carousel-caption hidden-phone">
-              <h4>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h4>
+              <h4>Brand &amp; Launch Excellence</h4>
+              <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
+            </div>
+          </li>
+           <li class="item" > <%= image_tag "SWOT_tags_short.jpg" %>
+            <div class="carousel-caption hidden-phone">
+              <h4>GalbraithWight Business School</h4>
               <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus. </p>
             </div>
           </li>
@@ -74,22 +74,22 @@
     <!-- Second Section -->
     <div class="row-fluid">
       <div class="span4 section-box">
-        <h4 class="section-heading">Lorem Ipsum</h4>
-        <img  src="images/business-33.jpg" alt="image" />
+        <h4 class="section-heading">Market Access</h4>
+        <%= image_tag "graph.jpg", :class => "sectionimage" %>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <p><a class="metro pull-right" href="#">View details &raquo;</a></p>
       </div>
       <!-- end span4 section-box-->
       <div class="span4 section-box">
-        <h4 class="section-heading">Amet Mauris</h4>
-        <img src="images/business-11.jpg" alt="image" >
+        <h4 class="section-heading">Insight Market Research</h4>
+        <%= image_tag "planet_1.jpg", :class => "sectionimage" %>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <p><a class="metro pull-right" href="#">View details &raquo;</a></p>
       </div>
       <!-- end span4 section-box-->
       <div class="span4 section-box">
-        <h4 class="section-heading">Duis mollis</h4>
-        <img src="images/business-22.jpg" alt="image" >
+        <h4 class="section-heading">Brand &amp; Launch Excellence</h4>
+        <%= image_tag "excellence_def.jpg", :class => "sectionimage" %>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <p><a class="metro pull-right" href="#">View details &raquo;</a></p>
       </div>
@@ -100,7 +100,7 @@
     <!-- Latest project section -->
     <div class="row">
       <div class="span12">
-        <h4 class="section-heading">Latest projects</h4>
+        <h4 class="section-heading">Latest News</h4>
       </div>
       <div class="span3 section-box">
         <div class="preview"> <img  src="images/Project-1.jpg" class="img-polaroid" style="width:96%;" alt="image" >
@@ -145,23 +145,27 @@
         <div class="span12">
           <div id="flex-clients" class="flexslider">
             <ul class="slides">
-              <li class="item"> <img src="images/logo-1.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-2.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-3.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-4.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-5.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-6.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-7.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-8.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-5.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-4.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-6.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-3.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-7.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-2.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-8.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-1.jpg"  alt="image" /> </li>
-              <li class="item"> <img src="images/logo-6.jpg"  alt="image" /> </li>
+              <li class="item"> <%= image_tag "AbbVie.png" %> </li>
+              <li class="item"> <%= image_tag "Astellas.png" %> </li>
+              <li class="item"> <%= image_tag "AstraZeneca.png" %> </li>
+              <li class="item"> <%= image_tag "Boehringer.png" %> </li>
+              <li class="item"> <%= image_tag "B-MS.png" %> </li>
+              <li class="item"> <%= image_tag "Celgene.png" %> </li>
+              <li class="item"> <%= image_tag "Cubist.png" %> </li>
+              <li class="item"> <%= image_tag "Eisai.png" %> </li>
+              <li class="item"> <%= image_tag "Ferring.png" %> </li>
+              <li class="item"> <%= image_tag "Gilead.png" %> </li>
+              <li class="item"> <%= image_tag "GSK.png" %> </li>
+              <li class="item"> <%= image_tag "Lundbeck.png" %> </li>
+              <li class="item"> <%= image_tag "MerckSerono.png" %> </li>
+              <li class="item"> <%= image_tag "MerckCo.png" %> </li>
+              <li class="item"> <%= image_tag "Novartis.png" %> </li>
+              <li class="item"> <%= image_tag "Otsuka.png" %> </li>
+              <li class="item"> <%= image_tag "Pfizer.png" %> </li>
+              <li class="item"> <%= image_tag "Roche.png" %> </li>
+              <li class="item"> <%= image_tag "Sanofi.png" %> </li>
+              <li class="item"> <%= image_tag "SPMSD.png" %> </li>
+              <li class="item"> <%= image_tag "UCB.png" %> </li>
             </ul>
           </div>
         </div>
