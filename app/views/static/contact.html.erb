@@ -38,7 +38,6 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/holder.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="js/lightbox.js"></script>
 <script type="text/javascript" src="js/jquery.backgroundpos.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <!-- ui map based on google map -->
@@ -75,17 +74,14 @@ $('#map_canvas').gmap({'callback': function() {
 // }
   
   self.addMarker({'position': '50.81854,0.2697725','bounds':true}).click(function() {
+
                                                   
     self.openInfoWindow({'content': 'GalbraithWight UK'}, this);
   });
+
 }}).bind('init', function() {$('#map_canvas').gmap('option', 'zoom', 10) });
 
-$('#map_canvas').gmap({'callback': function() {
-  var self = this; // we can't use "this" inside the click function (that refers to the marker object in this example)
-  self.addMarker({'position': '40.3754944,-74.6642009', 'bounds':true}).click(function() {
-      self.openInfoWindow({'content': 'GalbraithWight USA'}, this);
-    });
-}}).bind('init', function() {$('#map_canvas').gmap('option', 'zoom', 10) });
+$(document).bind("projectLoadComplete", initialize);
 /* end jquery.ui.map page contact */
 </script>
 

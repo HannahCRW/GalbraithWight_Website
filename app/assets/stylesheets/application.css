@@ -8298,7 +8298,7 @@ border-radius: 0px;
 }
 
 /* line 30, ../sass/lightbox.sass */
-.lb-outerContainer {
+/*.lb-outerContainer {
   position: relative;
   background-color: white;
   *zoom: 1;
@@ -8306,18 +8306,18 @@ border-radius: 0px;
   height: 250px;
   margin: 0 auto;
 
-}
+}*/
 /* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.lb-outerContainer:after {
+/*.lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 /* line 39, ../sass/lightbox.sass */
-.lb-container {
+/*.lb-container {
   padding: 10px;
-}
+}*/
 
 /* line 42, ../sass/lightbox.sass */
 .lb-loader {

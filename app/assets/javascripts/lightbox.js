@@ -1,702 +1,702 @@
 
 
-/*
+// /*
 
-Lightbox v2.51
+// Lightbox v2.51
 
-by Lokesh Dhakar - http://www.lokeshdhakar.com
-
-
-
-For more information, visit:
-
-http://lokeshdhakar.com/projects/lightbox2/
+// by Lokesh Dhakar - http://www.lokeshdhakar.com
 
 
 
-Licensed under the Creative Commons Attribution 2.5 License - http://creativecommons.org/licenses/by/2.5/
+// For more information, visit:
 
-- free for use in both personal and commercial projects
+// http://lokeshdhakar.com/projects/lightbox2/
 
-- attribution requires leaving author name, author link, and the license info intact
+
+
+// Licensed under the Creative Commons Attribution 2.5 License - http://creativecommons.org/licenses/by/2.5/
+
+// - free for use in both personal and commercial projects
+
+// - attribution requires leaving author name, author link, and the license info intact
 
 	
 
-Thanks
+// Thanks
 
-- Scott Upton(uptonic.com), Peter-Paul Koch(quirksmode.com), and Thomas Fuchs(mir.aculo.us) for ideas, libs, and snippets.
+// - Scott Upton(uptonic.com), Peter-Paul Koch(quirksmode.com), and Thomas Fuchs(mir.aculo.us) for ideas, libs, and snippets.
 
-- Artemy Tregubenko (arty.name) for cleanup and help in updating to latest proto-aculous in v2.05.
+// - Artemy Tregubenko (arty.name) for cleanup and help in updating to latest proto-aculous in v2.05.
 
 
 
 
 
-Table of Contents
+// Table of Contents
 
-=================
+// =================
 
-LightboxOptions
+// LightboxOptions
 
 
 
-Lightbox
+// Lightbox
 
-- constructor
+// - constructor
 
-- init
+// - init
 
-- enable
+// - enable
 
-- build
+// - build
 
-- start
+// - start
 
-- changeImage
+// - changeImage
 
-- sizeContainer
+// - sizeContainer
 
-- showImage
+// - showImage
 
-- updateNav
+// - updateNav
 
-- updateDetails
+// - updateDetails
 
-- preloadNeigbhoringImages
+// - preloadNeigbhoringImages
 
-- enableKeyboardNav
+// - enableKeyboardNav
 
-- disableKeyboardNav
+// - disableKeyboardNav
 
-- keyboardAction
+// - keyboardAction
 
-- end
+// - end
 
 
 
-options = new LightboxOptions
+// options = new LightboxOptions
 
-lightbox = new Lightbox options
+// lightbox = new Lightbox options
 
-*/
+// */
 
 
 
-(function() {
+// (function() {
 
-  var $, Lightbox, LightboxOptions;
+//   var $, Lightbox, LightboxOptions;
 
 
 
-  $ = jQuery;
+//   $ = jQuery;
 
 
 
-  LightboxOptions = (function() {
+//   LightboxOptions = (function() {
 
 
 
-    function LightboxOptions() {
+//     function LightboxOptions() {
 
-      this.fileLoadingImage = '../images/loading.gif';
+//       this.fileLoadingImage = '../images/loading.gif';
 
-      this.fileCloseImage = '../images/close.png';
+//       this.fileCloseImage = '../images/close.png';
 
-      this.resizeDuration = 700;
+//       this.resizeDuration = 700;
 
-      this.fadeDuration = 500;
+//       this.fadeDuration = 500;
 
-      this.labelImage = "Image";
+//       this.labelImage = "Image";
 
-      this.labelOf = "of";
+//       this.labelOf = "of";
 
-    }
+//     }
 
 
 
-    return LightboxOptions;
+//     return LightboxOptions;
 
 
 
-  })();
+//   })();
 
 
 
-  Lightbox = (function() {
+//   Lightbox = (function() {
 
 
 
-    function Lightbox(options) {
+//     function Lightbox(options) {
 
-      this.options = options;
+//       this.options = options;
 
-      this.album = [];
+//       this.album = [];
 
-      this.currentImageIndex = void 0;
+//       this.currentImageIndex = void 0;
 
-      this.init();
+//       this.init();
 
-    }
+//     }
 
 
 
-    Lightbox.prototype.init = function() {
+//     Lightbox.prototype.init = function() {
 
-      this.enable();
+//       this.enable();
 
-      return this.build();
+//       return this.build();
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.enable = function() {
+//     Lightbox.prototype.enable = function() {
 
-      var _this = this;
+//       var _this = this;
 
-      return $('body').on('click', 'a[data-rel^=lightbox], area[data-rel^=lightbox]', function(e) {
+//       return $('body').on('click', 'a[data-rel^=lightbox], area[data-rel^=lightbox]', function(e) {
 
-        _this.start($(e.currentTarget));
+//         _this.start($(e.currentTarget));
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.build = function() {
+//     Lightbox.prototype.build = function() {
 
-      var $lightbox,
+//       var $lightbox,
 
-        _this = this;
+//         _this = this;
 
-      $("<div>", {
+//       $("<div>", {
 
-        id: 'lightboxOverlay'
+//         id: 'lightboxOverlay'
 
-      }).after($('<div/>', {
+//       }).after($('<div/>', {
 
-        id: 'lightbox'
+//         id: 'lightbox'
 
-      }).append($('<div/>', {
+//       }).append($('<div/>', {
 
-        "class": 'lb-outerContainer'
+//         "class": 'lb-outerContainer'
 
-      }).append($('<div/>', {
+//       }).append($('<div/>', {
 
-        "class": 'lb-container'
+//         "class": 'lb-container'
 
-      }).append($('<img/>', {
+//       }).append($('<img/>', {
 
-        "class": 'lb-image'
+//         "class": 'lb-image'
 
-      }), $('<div/>', {
+//       }), $('<div/>', {
 
-        "class": 'lb-nav'
+//         "class": 'lb-nav'
 
-      }).append($('<a/>', {
+//       }).append($('<a/>', {
 
-        "class": 'lb-prev'
+//         "class": 'lb-prev'
 
-      }), $('<a/>', {
+//       }), $('<a/>', {
 
-        "class": 'lb-next'
+//         "class": 'lb-next'
 
-      })), $('<div/>', {
+//       })), $('<div/>', {
 
-        "class": 'lb-loader'
+//         "class": 'lb-loader'
 
-      }).append($('<a/>', {
+//       }).append($('<a/>', {
 
-        "class": 'lb-cancel'
+//         "class": 'lb-cancel'
 
-      }).append($('<img/>', {
+//       }).append($('<img/>', {
 
-        src: this.options.fileLoadingImage
+//         src: this.options.fileLoadingImage
 
-      }))))), $('<div/>', {
+//       }))))), $('<div/>', {
 
-        "class": 'lb-dataContainer'
+//         "class": 'lb-dataContainer'
 
-      }).append($('<div/>', {
+//       }).append($('<div/>', {
 
-        "class": 'lb-data'
+//         "class": 'lb-data'
 
-      }).append($('<div/>', {
+//       }).append($('<div/>', {
 
-        "class": 'lb-details'
+//         "class": 'lb-details'
 
-      }).append($('<span/>', {
+//       }).append($('<span/>', {
 
-        "class": 'lb-caption'
+//         "class": 'lb-caption'
 
-      }), $('<span/>', {
+//       }), $('<span/>', {
 
-        "class": 'lb-number'
+//         "class": 'lb-number'
 
-      })), $('<div/>', {
+//       })), $('<div/>', {
 
-        "class": 'lb-closeContainer'
+//         "class": 'lb-closeContainer'
 
-      }).append($('<a/>', {
+//       }).append($('<a/>', {
 
-        "class": 'lb-close'
+//         "class": 'lb-close'
 
-      }).append($('<img/>', {
+//       }).append($('<img/>', {
 
-        src: this.options.fileCloseImage
+//         src: this.options.fileCloseImage
 
-      }))))))).appendTo($('body'));
+//       }))))))).appendTo($('body'));
 
-      $('#lightboxOverlay').hide().on('click', function(e) {
+//       $('#lightboxOverlay').hide().on('click', function(e) {
 
-        _this.end();
+//         _this.end();
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      $lightbox.hide().on('click', function(e) {
+//       $lightbox.hide().on('click', function(e) {
 
-        if ($(e.target).attr('id') === 'lightbox') _this.end();
+//         if ($(e.target).attr('id') === 'lightbox') _this.end();
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-      $lightbox.find('.lb-outerContainer').on('click', function(e) {
+//       $lightbox.find('.lb-outerContainer').on('click', function(e) {
 
-        if ($(e.target).attr('id') === 'lightbox') _this.end();
+//         if ($(e.target).attr('id') === 'lightbox') _this.end();
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-      $lightbox.find('.lb-prev').on('click', function(e) {
+//       $lightbox.find('.lb-prev').on('click', function(e) {
 
-        _this.changeImage(_this.currentImageIndex - 1);
+//         _this.changeImage(_this.currentImageIndex - 1);
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-      $lightbox.find('.lb-next').on('click', function(e) {
+//       $lightbox.find('.lb-next').on('click', function(e) {
 
-        _this.changeImage(_this.currentImageIndex + 1);
+//         _this.changeImage(_this.currentImageIndex + 1);
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-      $lightbox.find('.lb-loader, .lb-close').on('click', function(e) {
+//       $lightbox.find('.lb-loader, .lb-close').on('click', function(e) {
 
-        _this.end();
+//         _this.end();
 
-        return false;
+//         return false;
 
-      });
+//       });
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.start = function($link) {
+//     Lightbox.prototype.start = function($link) {
 
-      var $lightbox, $window, a, i, imageNumber, left, top, _len, _ref;
+//       var $lightbox, $window, a, i, imageNumber, left, top, _len, _ref;
 
-      $(window).on("resize", this.sizeOverlay);
+//       $(window).on("resize", this.sizeOverlay);
 
-      $('select, object, embed').css({
+//       $('select, object, embed').css({
 
-        visibility: "hidden"
+//         visibility: "hidden"
 
-      });
+//       });
 
-      $('#lightboxOverlay').width($(document).width()).height($(document).height()).fadeIn(this.options.fadeDuration);
+//       $('#lightboxOverlay').width($(document).width()).height($(document).height()).fadeIn(this.options.fadeDuration);
 
-      this.album = [];
+//       this.album = [];
 
-      imageNumber = 0;
+//       imageNumber = 0;
 
-      if ($link.attr('data-rel') === 'lightbox') {
+//       if ($link.attr('data-rel') === 'lightbox') {
 
-        this.album.push({
+//         this.album.push({
 
-          link: $link.attr('href'),
+//           link: $link.attr('href'),
 
-          title: $link.attr('title')
+//           title: $link.attr('title')
 
-        });
+//         });
 
-      } else {
+//       } else {
 
-        _ref = $($link.prop("tagName") + '[data-rel="' + $link.attr('data-rel') + '"]');
+//         _ref = $($link.prop("tagName") + '[data-rel="' + $link.attr('data-rel') + '"]');
 
-        for (i = 0, _len = _ref.length; i < _len; i++) {
+//         for (i = 0, _len = _ref.length; i < _len; i++) {
 
-          a = _ref[i];
+//           a = _ref[i];
 
-          this.album.push({
+//           this.album.push({
 
-            link: $(a).attr('href'),
+//             link: $(a).attr('href'),
 
-            title: $(a).attr('title')
+//             title: $(a).attr('title')
 
-          });
+//           });
 
-          if ($(a).attr('href') === $link.attr('href')) imageNumber = i;
+//           if ($(a).attr('href') === $link.attr('href')) imageNumber = i;
 
-        }
+//         }
 
-      }
+//       }
 
-      $window = $(window);
+//       $window = $(window);
 
-      top = $window.scrollTop() + $window.height() / 10;
+//       top = $window.scrollTop() + $window.height() / 10;
 
-      left = $window.scrollLeft();
+//       left = $window.scrollLeft();
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      $lightbox.css({
+//       $lightbox.css({
 
-        top: top + 'px',
+//         top: top + 'px',
 
-        left: left + 'px'
+//         left: left + 'px'
 
-      }).fadeIn(this.options.fadeDuration);
+//       }).fadeIn(this.options.fadeDuration);
 
-      this.changeImage(imageNumber);
+//       this.changeImage(imageNumber);
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.changeImage = function(imageNumber) {
+//     Lightbox.prototype.changeImage = function(imageNumber) {
 
-      var $image, $lightbox, preloader,
+//       var $image, $lightbox, preloader,
 
-        _this = this;
+//         _this = this;
 
-      this.disableKeyboardNav();
+//       this.disableKeyboardNav();
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      $image = $lightbox.find('.lb-image');
+//       $image = $lightbox.find('.lb-image');
 
-      this.sizeOverlay();
+//       this.sizeOverlay();
 
-      $('#lightboxOverlay').fadeIn(this.options.fadeDuration);
+//       $('#lightboxOverlay').fadeIn(this.options.fadeDuration);
 
-      $('.loader').fadeIn('slow');
+//       $('.loader').fadeIn('slow');
 
-      $lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
+//       $lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
 
-      $lightbox.find('.lb-outerContainer').addClass('animating');
+//       $lightbox.find('.lb-outerContainer').addClass('animating');
 
-      preloader = new Image;
+//       preloader = new Image;
 
-      preloader.onload = function() {
+//       preloader.onload = function() {
 
-        $image.attr('src', _this.album[imageNumber].link);
+//         $image.attr('src', _this.album[imageNumber].link);
 
-        $image.width = preloader.width;
+//         $image.width = preloader.width;
 
-        $image.height = preloader.height;
+//         $image.height = preloader.height;
 
-        return _this.sizeContainer(preloader.width, preloader.height);
+//         return _this.sizeContainer(preloader.width, preloader.height);
 
-      };
+//       };
 
-      preloader.src = this.album[imageNumber].link;
+//       preloader.src = this.album[imageNumber].link;
 
-      this.currentImageIndex = imageNumber;
+//       this.currentImageIndex = imageNumber;
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.sizeOverlay = function() {
+//     Lightbox.prototype.sizeOverlay = function() {
 
-      return $('#lightboxOverlay').width($(document).width()).height($(document).height());
+//       return $('#lightboxOverlay').width($(document).width()).height($(document).height());
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.sizeContainer = function(imageWidth, imageHeight) {
+//     Lightbox.prototype.sizeContainer = function(imageWidth, imageHeight) {
 
-      var $container, $lightbox, $outerContainer, containerBottomPadding, containerLeftPadding, containerRightPadding, containerTopPadding, newHeight, newWidth, oldHeight, oldWidth,
+//       var $container, $lightbox, $outerContainer, containerBottomPadding, containerLeftPadding, containerRightPadding, containerTopPadding, newHeight, newWidth, oldHeight, oldWidth,
 
-        _this = this;
+//         _this = this;
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      $outerContainer = $lightbox.find('.lb-outerContainer');
+//       $outerContainer = $lightbox.find('.lb-outerContainer');
 
-      oldWidth = $outerContainer.outerWidth();
+//       oldWidth = $outerContainer.outerWidth();
 
-      oldHeight = $outerContainer.outerHeight();
+//       oldHeight = $outerContainer.outerHeight();
 
-      $container = $lightbox.find('.lb-container');
+//       $container = $lightbox.find('.lb-container');
 
-      containerTopPadding = parseInt($container.css('padding-top'), 10);
+//       containerTopPadding = parseInt($container.css('padding-top'), 10);
 
-      containerRightPadding = parseInt($container.css('padding-right'), 10);
+//       containerRightPadding = parseInt($container.css('padding-right'), 10);
 
-      containerBottomPadding = parseInt($container.css('padding-bottom'), 10);
+//       containerBottomPadding = parseInt($container.css('padding-bottom'), 10);
 
-      containerLeftPadding = parseInt($container.css('padding-left'), 10);
+//       containerLeftPadding = parseInt($container.css('padding-left'), 10);
 
-      newWidth = imageWidth + containerLeftPadding + containerRightPadding;
+//       newWidth = imageWidth + containerLeftPadding + containerRightPadding;
 
-      newHeight = imageHeight + containerTopPadding + containerBottomPadding;
+//       newHeight = imageHeight + containerTopPadding + containerBottomPadding;
 
-      if (newWidth !== oldWidth && newHeight !== oldHeight) {
+//       if (newWidth !== oldWidth && newHeight !== oldHeight) {
 
-        $outerContainer.animate({
+//         $outerContainer.animate({
 
-          width: newWidth,
+//           width: newWidth,
 
-          height: newHeight
+//           height: newHeight
 
-        }, this.options.resizeDuration, 'swing');
+//         }, this.options.resizeDuration, 'swing');
 
-      } else if (newWidth !== oldWidth) {
+//       } else if (newWidth !== oldWidth) {
 
-        $outerContainer.animate({
+//         $outerContainer.animate({
 
-          width: newWidth
+//           width: newWidth
 
-        }, this.options.resizeDuration, 'swing');
+//         }, this.options.resizeDuration, 'swing');
 
-      } else if (newHeight !== oldHeight) {
+//       } else if (newHeight !== oldHeight) {
 
-        $outerContainer.animate({
+//         $outerContainer.animate({
 
-          height: newHeight
+//           height: newHeight
 
-        }, this.options.resizeDuration, 'swing');
+//         }, this.options.resizeDuration, 'swing');
 
-      }
+//       }
 
-      setTimeout(function() {
+//       setTimeout(function() {
 
-        $lightbox.find('.lb-dataContainer').width(newWidth);
+//         $lightbox.find('.lb-dataContainer').width(newWidth);
 
-        $lightbox.find('.lb-prevLink').height(newHeight);
+//         $lightbox.find('.lb-prevLink').height(newHeight);
 
-        $lightbox.find('.lb-nextLink').height(newHeight);
+//         $lightbox.find('.lb-nextLink').height(newHeight);
 
-        _this.showImage();
+//         _this.showImage();
 
-      }, this.options.resizeDuration);
+//       }, this.options.resizeDuration);
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.showImage = function() {
+//     Lightbox.prototype.showImage = function() {
 
-      var $lightbox;
+//       var $lightbox;
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      $lightbox.find('.lb-loader').hide();
+//       $lightbox.find('.lb-loader').hide();
 
-      $lightbox.find('.lb-image').fadeIn('slow');
+//       $lightbox.find('.lb-image').fadeIn('slow');
 
-      this.updateNav();
+//       this.updateNav();
 
-      this.updateDetails();
+//       this.updateDetails();
 
-      this.preloadNeighboringImages();
+//       this.preloadNeighboringImages();
 
-      this.enableKeyboardNav();
+//       this.enableKeyboardNav();
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.updateNav = function() {
+//     Lightbox.prototype.updateNav = function() {
 
-      var $lightbox;
+//       var $lightbox;
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      $lightbox.find('.lb-nav').show();
+//       $lightbox.find('.lb-nav').show();
 
-      if (this.currentImageIndex > 0) $lightbox.find('.lb-prev').show();
+//       if (this.currentImageIndex > 0) $lightbox.find('.lb-prev').show();
 
-      if (this.currentImageIndex < this.album.length - 1) {
+//       if (this.currentImageIndex < this.album.length - 1) {
 
-        $lightbox.find('.lb-next').show();
+//         $lightbox.find('.lb-next').show();
 
-      }
+//       }
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.updateDetails = function() {
+//     Lightbox.prototype.updateDetails = function() {
 
-      var $lightbox,
+//       var $lightbox,
 
-        _this = this;
+//         _this = this;
 
-      $lightbox = $('#lightbox');
+//       $lightbox = $('#lightbox');
 
-      if (typeof this.album[this.currentImageIndex].title !== 'undefined' && this.album[this.currentImageIndex].title !== "") {
+//       if (typeof this.album[this.currentImageIndex].title !== 'undefined' && this.album[this.currentImageIndex].title !== "") {
 
-        $lightbox.find('.lb-caption').html(this.album[this.currentImageIndex].title).fadeIn('fast');
+//         $lightbox.find('.lb-caption').html(this.album[this.currentImageIndex].title).fadeIn('fast');
 
-      }
+//       }
 
-      if (this.album.length > 1) {
+//       if (this.album.length > 1) {
 
-        $lightbox.find('.lb-number').html(this.options.labelImage + ' ' + (this.currentImageIndex + 1) + ' ' + this.options.labelOf + '  ' + this.album.length).fadeIn('fast');
+//         $lightbox.find('.lb-number').html(this.options.labelImage + ' ' + (this.currentImageIndex + 1) + ' ' + this.options.labelOf + '  ' + this.album.length).fadeIn('fast');
 
-      } else {
+//       } else {
 
-        $lightbox.find('.lb-number').hide();
+//         $lightbox.find('.lb-number').hide();
 
-      }
+//       }
 
-      $lightbox.find('.lb-outerContainer').removeClass('animating');
+//       $lightbox.find('.lb-outerContainer').removeClass('animating');
 
-      $lightbox.find('.lb-dataContainer').fadeIn(this.resizeDuration, function() {
+//       $lightbox.find('.lb-dataContainer').fadeIn(this.resizeDuration, function() {
 
-        return _this.sizeOverlay();
+//         return _this.sizeOverlay();
 
-      });
+//       });
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.preloadNeighboringImages = function() {
+//     Lightbox.prototype.preloadNeighboringImages = function() {
 
-      var preloadNext, preloadPrev;
+//       var preloadNext, preloadPrev;
 
-      if (this.album.length > this.currentImageIndex + 1) {
+//       if (this.album.length > this.currentImageIndex + 1) {
 
-        preloadNext = new Image;
+//         preloadNext = new Image;
 
-        preloadNext.src = this.album[this.currentImageIndex + 1].link;
+//         preloadNext.src = this.album[this.currentImageIndex + 1].link;
 
-      }
+//       }
 
-      if (this.currentImageIndex > 0) {
+//       if (this.currentImageIndex > 0) {
 
-        preloadPrev = new Image;
+//         preloadPrev = new Image;
 
-        preloadPrev.src = this.album[this.currentImageIndex - 1].link;
+//         preloadPrev.src = this.album[this.currentImageIndex - 1].link;
 
-      }
+//       }
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.enableKeyboardNav = function() {
+//     Lightbox.prototype.enableKeyboardNav = function() {
 
-      $(document).on('keyup.keyboard', $.proxy(this.keyboardAction, this));
+//       $(document).on('keyup.keyboard', $.proxy(this.keyboardAction, this));
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.disableKeyboardNav = function() {
+//     Lightbox.prototype.disableKeyboardNav = function() {
 
-      $(document).off('.keyboard');
+//       $(document).off('.keyboard');
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.keyboardAction = function(event) {
+//     Lightbox.prototype.keyboardAction = function(event) {
 
-      var KEYCODE_ESC, KEYCODE_LEFTARROW, KEYCODE_RIGHTARROW, key, keycode;
+//       var KEYCODE_ESC, KEYCODE_LEFTARROW, KEYCODE_RIGHTARROW, key, keycode;
 
-      KEYCODE_ESC = 27;
+//       KEYCODE_ESC = 27;
 
-      KEYCODE_LEFTARROW = 37;
+//       KEYCODE_LEFTARROW = 37;
 
-      KEYCODE_RIGHTARROW = 39;
+//       KEYCODE_RIGHTARROW = 39;
 
-      keycode = event.keyCode;
+//       keycode = event.keyCode;
 
-      key = String.fromCharCode(keycode).toLowerCase();
+//       key = String.fromCharCode(keycode).toLowerCase();
 
-      if (keycode === KEYCODE_ESC || key.match(/x|o|c/)) {
+//       if (keycode === KEYCODE_ESC || key.match(/x|o|c/)) {
 
-        this.end();
+//         this.end();
 
-      } else if (key === 'p' || keycode === KEYCODE_LEFTARROW) {
+//       } else if (key === 'p' || keycode === KEYCODE_LEFTARROW) {
 
-        if (this.currentImageIndex !== 0) {
+//         if (this.currentImageIndex !== 0) {
 
-          this.changeImage(this.currentImageIndex - 1);
+//           this.changeImage(this.currentImageIndex - 1);
 
-        }
+//         }
 
-      } else if (key === 'n' || keycode === KEYCODE_RIGHTARROW) {
+//       } else if (key === 'n' || keycode === KEYCODE_RIGHTARROW) {
 
-        if (this.currentImageIndex !== this.album.length - 1) {
+//         if (this.currentImageIndex !== this.album.length - 1) {
 
-          this.changeImage(this.currentImageIndex + 1);
+//           this.changeImage(this.currentImageIndex + 1);
 
-        }
+//         }
 
-      }
+//       }
 
-    };
+//     };
 
 
 
-    Lightbox.prototype.end = function() {
+//     Lightbox.prototype.end = function() {
 
-      this.disableKeyboardNav();
+//       this.disableKeyboardNav();
 
-      $(window).off("resize", this.sizeOverlay);
+//       $(window).off("resize", this.sizeOverlay);
 
-      $('#lightbox').fadeOut(this.options.fadeDuration);
+//       $('#lightbox').fadeOut(this.options.fadeDuration);
 
-      $('#lightboxOverlay').fadeOut(this.options.fadeDuration);
+//       $('#lightboxOverlay').fadeOut(this.options.fadeDuration);
 
-      return $('select, object, embed').css({
+//       return $('select, object, embed').css({
 
-        visibility: "visible"
+//         visibility: "visible"
 
-      });
+//       });
 
-    };
+//     };
 
 
 
-    return Lightbox;
+//     return Lightbox;
 
 
 
-  })();
+//   })();
 
 
 
-  $(function() {
+//   $(function() {
 
-    var lightbox, options;
+//     var lightbox, options;
 
-    options = new LightboxOptions;
+//     options = new LightboxOptions;
 
-    return lightbox = new Lightbox(options);
+//     return lightbox = new Lightbox(options);
 
-  });
+//   });
 
 
 
-}).call(this);
+// }).call(this);
 
