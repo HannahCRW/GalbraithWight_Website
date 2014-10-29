@@ -72,16 +72,16 @@ $('#map_canvas').gmap({'callback': function() {
 //     map: map
 //   });
 // }
-  
-  self.addMarker({'position': '50.81854,0.2697725','bounds':true}).click(function() {
 
+  self.addMarker({'position': '50.81854,0.2697725','bounds':true}).click(function() {
+    $(document).bind("projectLoadComplete", initialize);
                                                   
     self.openInfoWindow({'content': 'GalbraithWight UK'}, this);
   });
 
 }}).bind('init', function() {$('#map_canvas').gmap('option', 'zoom', 10) });
 
-$(document).bind("projectLoadComplete", initialize);
+
 /* end jquery.ui.map page contact */
 </script>
 
