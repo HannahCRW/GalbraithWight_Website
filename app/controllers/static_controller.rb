@@ -4,4 +4,7 @@ class StaticController < ApplicationController
 
   def sitemap
   end
+
+  def events
+  end
 end
