@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'static/serviceset'
 
+  get 'static/events'
+
   get 'about/history'
 
   get 'about/vision'

@@ -8,24 +8,17 @@
       <div id="logo" class="brand">
       	<%= link_to (image_tag "GW_logo_rethinking.png", :class => "gwlogorethinking"), "/" %>
       </div>
-      <div id="slogan" class="hidden-phone">Lorem ipsum dolor sit amet</div>
+      <div id="slogan" class="hidden-phone">Global Market Access</div>
     </div>
     <!-- End Logo and slogan -->
     <!-- desktop menu -->
     <div id="top-menu-horizontal">
       <ul class="nav pull-right hidden-phone hidden-tablet">
       	<li> <%= link_to "Home", "/" %> </li>
-      	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-      		<ul class="dropdown-menu">
-      			<li> <%= link_to "Market Access", ma_services_path %> </li>
-      			<li> <%= link_to "Insight Market Research", imr_services_path %> </li>
-      			<li> <%= link_to "Brand & Launch Excellence", ble_services_path %> </li>
-      			<li> <%= link_to "Business School", "/" %> </li>
-      		</ul>
-      	</li>
+      	<li> <%= link_to "Services", static_serviceset_path %> </li>
       	<li> <%= link_to "Contact Us", static_contact_path %> </li>
       	<li> <%= link_to "About Us", about_overview_path %> </li>
-      	<li> <%= link_to "Login", new_user_path %> </li>
+      	<li> <%= link_to "Events", static_events_path %> </li>
       </ul>
     </div>
     <!-- end desktop menu -->
