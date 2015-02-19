@@ -30,15 +30,6 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-resources :users
-
-  devise_for :users, skip: :sessions
-  root 'home#index'
-  as :user do
-    get 'sign-in' => 'devise/sessions#new', :as => :new_user_session
-    post 'sign-in' => 'devise/sessions#create', :as => :user_session
-    delete 'sign-out' => 'devise/sessions#destroy', :as => :destroy_user_session
-  end
 
   get 'news/index'
     resources :articles do
