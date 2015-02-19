@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'events/index'
+
   get 'about/overview'
 
   get 'static/serviceset'
-
-  get 'static/events'
 
   get 'about/history'
 
