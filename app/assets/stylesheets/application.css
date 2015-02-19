@@ -8084,6 +8084,11 @@ p.section-heading{
 /*  social network Icons */
 
 /*  Page About us  */
+
+#eyepic {
+  float: left;
+}
+
 .information {
 	background: none repeat scroll 0 0 #D6E2EA;
 	border-bottom: 3px solid #2B4E72;
