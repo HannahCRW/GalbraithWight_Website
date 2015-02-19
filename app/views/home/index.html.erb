@@ -102,6 +102,17 @@
       <div class="span12">
         <h4 class="section-heading">Latest News</h4>
       </div>
+
+      <% @articles.each do | article | %>
+        <div class="span3 section-box">
+          <h3><%= article.title %></h3>
+          <p><%= article.text %></p>
+          <%= link_to('read more', article_path(article)) %>
+
+      </div>
+
+      <% end %> 
+
       <div class="span3 section-box">
         <div class="preview"> <img  src="images/Project-1.jpg" class="img-polaroid" style="width:96%;" alt="image" >
           <div class="overlay"> <a href="images/Project-1.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
