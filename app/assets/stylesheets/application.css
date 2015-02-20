@@ -11,13 +11,7 @@
  * file per style scope.
  *
  *
-<<<<<<< HEAD
-
-=======
  *= require font-awesome
->>>>>>> bba28c19c99e299bfff2ed2e915de7ad0661999f
- *= require_self
- *= require_tree .
  */
 
 /*!
