@@ -1,3 +1,4 @@
+<div id="main" class="container">
 <div class="row">
 	<div class="span12">
 		<h4 class="section-heading">Latest Events</h4>
@@ -7,5 +8,7 @@
 <div class="row">
 	<%- cache "google_calendar_feed", (Time.now + 60.minutes) do -%>
 		<%= render_calendar_feed(0,3) %>
+		<%= render_calendar_feed(4,7) %>
 	<%- end -%>
+</div>
 </div>

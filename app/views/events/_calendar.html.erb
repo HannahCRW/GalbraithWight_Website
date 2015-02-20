@@ -1,8 +1,9 @@
 <% @items.each do |item| %>
-   <div class="span3 section-box">
-   			<h5 class="section-heading"><%= item.title %></h5>
-        <p>From: <%= item.date.strftime("%d/%m/%Y %H:%M") %></p>
-        <p><%= item.description.force_encoding('UTF-8').html_safe %></p>
-        <p><a href="https://www.google.com/calendar/event?action=TEMPLATE&tmsrc=<%= item.cal %>&tmeid=<%= item.eid %>" class="metro metro-green pull-right">Add to Google Calendar</a></p>
+   <div class="span3 section-box event">
+   			<h5 class="section-heading event_title"><%= item.title %></h5>
+        <p class="event_time">Time: <%= item.date.strftime("%d/%m/%Y %H:%M") %></p>
+        <p class="event_location">Location: <%= item.where %> </p>
+        <p class="event_description"><%= item.description.force_encoding('UTF-8').html_safe %></p>
+        <p><a href="https://www.google.com/calendar/event?action=TEMPLATE&tmsrc=<%= item.cal %>&tmeid=<%= item.eid %>" class="metro metro-green pull-right addtocal_button">Add to Google Calendar</a></p>
       </div>
 <% end %>
