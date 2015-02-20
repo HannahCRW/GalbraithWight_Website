@@ -49,3 +49,9 @@ gem 'twitter-bootstrap-rails', group: :assets
 gem "font-awesome-rails"
 
 gem "simple-rss"
+
+gem 'tinymce-rails'
+
+gem 'sqlite3',  group: :development
+
+gem 'pg'

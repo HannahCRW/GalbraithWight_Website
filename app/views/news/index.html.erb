@@ -1,2 +1,11 @@
-<h1>News#index</h1>
-<p>This is the News page</p>
+<h1>All the latest news from GalbraithWight</h1>
+<div class="container">
+	<div class="row-fluid">
+		<% @articles.each do |article| %>
+		<div class="span4">
+			<h4 class="section-heading"><%= article.title %></h4>
+			<p><%= article.text.html_safe %></p>
+		</div>
+		<% end %>
+	</div>
+</div>
