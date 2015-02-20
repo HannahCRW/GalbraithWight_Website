@@ -31,10 +31,11 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
 
-  get 'news/index'
-    resources :articles do
-      resources :comments
-    end
+  get 'news', to: 'news#index'
+
+  resources :articles do
+    resources :comments
+  end
 
 
   root 'home#index'
