@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div id="map_canvas" class="img-polaroid" style="height:409px;margin-bottom:20px"></div>
 <script type="text/javascript">
@@ -31,6 +32,12 @@
   </script>
 
 <div id="main" class="container">
+=======
+<div id="main" class="container">
+  <div class="row">
+    <div id="map_canvas" class="img-polaroid" style="height:409px;margin-bottom:20px"></div>
+  </div>
+>>>>>>> bba28c19c99e299bfff2ed2e915de7ad0661999f
   <div class="row">
     <div class="span8">
       <div class="title">
@@ -91,4 +98,39 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      var locations = [
+          ['GalbraithWight UK', 50.81854, 0.2697725, 3],
+          ['GalbraithWight USA', 40.3754944, -74.6642009, 2],
+          ['GalbraithWight Europe', 45.4039839, 9.1513578, 1]
+      ];
+      var map = new google.maps.Map(document.getElementById('map_canvas'), {
+          zoom: 3,
+          center: new google.maps.LatLng(48, -35),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var infowindow = new google.maps.InfoWindow();
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+              map: map
+          });
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                  infowindow.setContent(locations[i][0]);
+                  infowindow.open(map, marker);
+              }
+          })(marker, i));
+      }
+  });
+</script>
+>>>>>>> bba28c19c99e299bfff2ed2e915de7ad0661999f
