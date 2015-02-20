@@ -15,7 +15,9 @@
 	</p>
 	<p>
 		<%= f.label :text %><br>
+		<%= f.text_area :text, :class => "tinymce"%><br>
 		<%= f.text_area :text %><br>
+		<%= tinymce :theme => "simple" %>
 	</p>
 	<p>
 		<%= f.submit %>
