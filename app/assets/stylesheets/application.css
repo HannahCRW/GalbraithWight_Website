@@ -7728,19 +7728,21 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 .latest-news-box-img {
 	float: left;
+  background-color: white;
+  margin-top: 7px;
 }
-.latest-news-box .img-polaroid {
-	background-color:#4e4d4a;
-	padding:2px;
-}
+
 .latest-news-box-text {
 	width: 80%;
-	float: right;
+	float: left;
+  margin-left: 15px;
 }
 #footer-copyright {
-	padding-top:10px;
-	padding-bottom:21px;
+	padding-top:8px;
+	padding-bottom:22px;
 	background-color:#4E4D4A;
+  color: gray;
+  height: 32px;
 }
 /* === End Footer Section === */
 
