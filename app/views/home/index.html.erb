@@ -69,56 +69,29 @@
     </div>
     <!-- End  second section-->
     <div class="clearfix"></div>
-    <!-- Latest project section -->
+
+
+    <!-- Latest news section -->
+    <div class="container">
     <div class="row">
       <div class="span12">
         <h4 class="section-heading">Latest News</h4>
       </div>
 
-      <% @articles.each do | article | %>
+      <% @articles.first(4).each do | article | %>
         <div class="span3 section-box">
-          <h3><%= article.title %></h3>
-          <p><%= article.text %></p>
+          <h3 class="article_title"><%= article.title %></h3>
+          <p class="article_text"><%= article.text.first(140) %>...</p>
           <%= link_to('read more', article_path(article)) %>
 
       </div>
 
       <% end %> 
 
-      <div class="span3 section-box">
-        <div class="preview"> <img  src="images/Project-1.jpg" class="img-polaroid" style="width:96%;" alt="image" >
-          <div class="overlay"> <a href="images/Project-1.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
-        </div>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
-      </div>
-      <!-- end span3 -->
-      <div class="span3 section-box">
-        <div class="preview"> <img  src="images/Project-2.jpg" class="img-polaroid" style="width:96%;" alt="image" >
-          <div class="overlay"> <a href="images/Project-2.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
-        </div>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
-      </div>
-      <!-- end span3 -->
-      <div class="span3 section-box">
-        <div class="preview"> <img  src="images/Project-3.jpg" class="img-polaroid" style="width:96%;" alt="image" >
-          <div class="overlay"> <a href="images/Project-3.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
-        </div>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
-      </div>
-      <!-- end span3 -->
-      <div class="span3 section-box">
-        <div class="preview"> <img  src="images/Project-4.jpg" class="img-polaroid" style="width:96%;" alt="image" >
-          <div class="overlay"> <a href="images/Project-4.jpg" data-rel="lightbox" class="lightbox zoom-in"></a> <a href="#" class="follow-link"></a> </div>
-        </div>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="metro metro-green pull-right" href="#">View details &raquo;</a></p>
-      </div>
-      <!-- end span3 -->
     </div>
-    <!-- End Latest project section -->
+    <!-- End Latest news section -->
+
+
     <!-- Our Clients section -->
     <div class="container">
       <div class="row">
