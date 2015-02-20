@@ -6067,6 +6067,7 @@ a.badge:hover {
 /* events and calendar */
 .event {
   height: 350px;
+  margin-bottom: 50px;
 }
 
   .event_title {
@@ -6079,12 +6080,16 @@ a.badge:hover {
   .event_time {
     padding-left: 10px;
     margin: 0 0 0 0 !important;
+    color:#2B4E72;
+    font-size: smaller;
   }
 
   .event_location {
     height: 60px;
     margin: 0 0 0 0 !important;
     padding: 5px 5px 5px 10px;
+    color:#2B4E72;
+    font-size: smaller;
   }
 
   .event_description {
