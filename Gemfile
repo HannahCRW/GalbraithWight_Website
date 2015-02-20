@@ -53,3 +53,5 @@ gem "simple-rss"
 gem 'tinymce-rails'
 
 gem 'sqlite3',  group: :development
+
+gem 'pg'
