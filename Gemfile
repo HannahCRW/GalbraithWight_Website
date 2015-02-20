@@ -49,7 +49,5 @@ gem 'omniauth-openid'
 gem 'twitter-bootstrap-rails', group: :assets
 
 gem "font-awesome-rails"
-=======
-gem "font-awesome-rails"
 
 gem "simple-rss"
