@@ -35,4 +35,6 @@ module ApplicationHelper
     @items = items_with_date.sort_by { |x| x.date }.select { |x| x.date > Date.today }[from..to]
     render :partial => 'events/calendar'
   end
+
+  
 end

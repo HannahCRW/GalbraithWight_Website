@@ -78,7 +78,7 @@
         <h4 class="section-heading">Latest News</h4>
       </div>
 
-      <% @articles.first(4).each do | article | %>
+      <% @articles.each do | article | %>
         <div class="span3 section-box">
           <h3 class="article_title"><%= article.title %></h3>
           <p class="article_text"><%= article.text.first(140) %>...</p>

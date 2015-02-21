@@ -4,15 +4,7 @@
   <div class="span1"></div>
     <div class="span7">
       <h3>Latest news</h3>
-      <% @articles.first(2).each do | article | %>
-        <div class="latest-news-box">
-          <h5><%= article.title %></h5>
-          <p class="article_text"><%= article.text.first(140) %>...</p>
-          <p class="footer_article_read_more"><%= link_to('read more', article_path(article)) %></p>
-
-      </div>
-
-      <% end %> 
+       
     </div>
     <div class="span1">
       <div class="span3">
