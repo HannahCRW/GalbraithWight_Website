@@ -4,6 +4,6 @@
         <p class="event_time">Time: <%= item.date.strftime("%d/%m/%Y %H:%M") %></p>
         <p class="event_location">Location: <%= item.where %> </p>
         <p class="event_description"><%= item.description.force_encoding('UTF-8').html_safe %></p>
-        <p><a href="https://www.google.com/calendar/event?action=TEMPLATE&tmsrc=<%= item.cal %>&tmeid=<%= item.eid %>" class="metro metro-green pull-right addtocal_button">Add to Google Calendar</a></p>
+        <p><a href="https://www.google.com/calendar/event?action=TEMPLATE&tmsrc=<%= item.cal %>&tmeid=<%= item.eid %>" class="metro metro-green pull-right addtocal_button">Add to my calendar</a></p>
       </div>
 <% end %>
