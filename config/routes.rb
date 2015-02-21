@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'bussch/services'
+
   get 'events/index'
 
   get 'about/overview'
