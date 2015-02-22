@@ -8520,3 +8520,8 @@ border-radius: 0px;
 .lb-data .lb-close:hover {
   cursor: pointer;
 }
+
+
+.thumbnails > li {
+    margin-left: 0px;
+}
