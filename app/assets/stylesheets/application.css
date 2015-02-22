@@ -7707,6 +7707,12 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 #main .row-fluid{
 	margin-top:30px;
 }
+
+.home-services-description {
+  height: 105px;
+}
+
+
 /* === End Main Section === */
 
 /* === Footer Section === */
@@ -8008,6 +8014,7 @@ p.section-heading{
 
 .sectionimage {
 	width: auto;
+  height:210px;
 }
 
 .sub-section-image {
