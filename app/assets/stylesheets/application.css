@@ -262,10 +262,11 @@ a:hover {
           border-radius: 6px;
 }
 
+
+
 .img-polaroid {
   padding: 4px;
-  height:340px;
-  width:225px;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -5457,7 +5458,6 @@ input[type="submit"].btn.btn-mini {
 }
 
 .thumbnails {
-  margin-left: -20px;
   list-style: none;
   *zoom: 1;
 }
@@ -8225,12 +8225,9 @@ p.section-heading{
 }
 .team-member figure{
 	margin-bottom: 30px;
-	
+	height: 350px;
 }
-.team-member figure img{
-	display:block;
-	margin:0 auto 30px auto;
-}
+
 .team-member .member-name{
 	font-size:12px;
 }
