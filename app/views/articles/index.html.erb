@@ -13,7 +13,7 @@
 		<th colspan="2"></th>
 	</tr>
 
-	<% @articles.each do |article| %>
+	<% latest_articles.each do |article| %>
 		<tr>
 			<td><%= article.title %></td>
 			<td><%= article.text.html_safe %></td>
