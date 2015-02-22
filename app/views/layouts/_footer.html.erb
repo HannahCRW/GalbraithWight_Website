@@ -1,25 +1,32 @@
 <!-- Footer -->
 <footer id="footer">
   <div class="row">
-  <div class="span1"></div>
+    <div class="span1"></div>
     <div class="span7">
       <h3>Latest news</h3>
-       
+      <% latest_articles(2).each do | article | %>
+      <div class="latest-news-box">
+        <h5><%= article.title %></h5>
+        <p class="article_text"><%= article.text.first(140).html_safe %>...</p>
+        <p class="footer_article_read_more"><%= link_to('read more', article_path(article)) %></p>
+      </div>
+      <% end %>
     </div>
     <div class="span1"></div>
       <div class="span3">
-      <h3>Contact Us</h3>
-      <p>GalbraithWight has offices located in the UK, Princeton NJ, and plans to have an office in Milan, Italy in 2015</p>
-      <p>Full contact details can be found <%=link_to "here", static_contact_path %></p><br />
-      <h3>Upcoming Events</h3>
-      <p>Find details of GalbraithWight's events calendar <%=link_to "here", events_index_path %></p> 
+        <h3>Contact Us</h3>
+        <p>GalbraithWight has offices located in the UK, Princeton NJ, and plans to have an office in Milan, Italy in 2015</p>
+        <p>Full contact details can be found <%=link_to "here", static_contact_path %></p><br />
+        <h3>Upcoming Events</h3>
+        <p>Find details of GalbraithWight's events calendar <%=link_to "here", events_index_path %></p>
+      </div>
+      </div>
     </div>
-</div>
   <div id="footer-copyright">
     <div class="container">
       <div class="row">
         <div class="span9"> Copyright &copy; GalbraithWight Ltd 2014</div>
- 
+        
         <div class="span3 pull-right"> <span class="facebook-icon social-icon"></span> <span class="twitter-icon social-icon"></span> <span class="google-icon social-icon"></span> </div>
       </div>
     </div>
