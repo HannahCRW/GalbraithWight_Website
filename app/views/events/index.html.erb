@@ -6,7 +6,7 @@
 	</div>
 </div>
 <div class="row">
-	<% cache "google_calendar_feed", (Time.now + 60.minutes) do %>
+	<% cache("google_calendar_feed", :expires_in => 1.hour) do %>
 		<%= render_calendar_feed(0,7) %>
 	<% end %>
 </div>
