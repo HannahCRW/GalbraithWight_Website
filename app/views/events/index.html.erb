@@ -6,8 +6,6 @@
 	</div>
 </div>
 <div class="row">
-	<%- cache "google_calendar_feed", (Time.now + 60.minutes) do -%>
 		<%= render_calendar_feed(0,7) %>
-	<%- end -%>
 </div>
 </div>
