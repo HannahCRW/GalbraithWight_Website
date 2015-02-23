@@ -7795,6 +7795,10 @@ margin-top:20px;
 	margin-top:20px;
 	padding:5px;
 }
+
+.homepage_links {
+  color: white;
+}
 /* === Latest news Section === */
 
 .article_title {
@@ -8056,6 +8060,7 @@ p.section-heading{
 }
 .metro {
 	display: inline-block;
+  margin-left: 3%;
 	padding: 8px 20px;
 	background: #5e8cbd;
 	/* Font styles */
