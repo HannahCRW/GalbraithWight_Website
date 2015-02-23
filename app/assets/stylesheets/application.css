@@ -7881,17 +7881,18 @@ margin-top:20px;
 }
 .prettyprint{
 	border: 1px solid #243976;
-	height: 189px;
-    page-break-inside: avoid;
+	height: 150px;
 	 padding: 0 3px 2px;
-	 margin:10px 0px 10px 0px;
+	margin:10px 0px 10px 0px;
 }
 .prettyprint img{
 	margin:10px;
 }
+
 .prettyprint div p {
-	padding: 5px;
+	padding: 2px;
 }
+
 	/* ===  Annimation Services === */
 ul[data-liffect="zoomOut"] {
 	margin: 0px;
@@ -7963,20 +7964,20 @@ transform: scale(1);
 	line-height: 18px;
 	margin:10px;
 	color: #4e4d4a;
-	background-color:#ccdbb3;
-	height: 167px;
+	background-color:#9cb8d6;
+	height: 175px;
 	background-size:100%;
-	padding: 10px 5px 0 0;
+	padding: 2px 2px 0 0;
 	border-width:2px;
 	border-style:dotted;
-	border-color:2B4E72;
+	border-color:#2B4E72;
 }
 .testimonials p{
-	margin:10px;
+	margin:8px;
 	}
 .testimonials-name{
 	text-align:right;
-	margin:5px 35px 25px 5px;
+	margin:2px 15px 20px 2px;
 	font-weight:bold;
   font-size: smaller;
 }
@@ -8267,11 +8268,18 @@ p.section-heading{
  line-height: 1.5;
 }
 .testimonials{
-	background-size:100%;
-	background-image:none;
-	background-color:#ccdbb3;
+  background-size: 100%;
+  background-image: none;
+	padding: 0 0 0 0;
+	background-color:#9cb8d6;
 }
-}
+  .testimonials p {
+    margin: 0;
+    padding: 0;
+    font-size: smaller;
+  }
+
+
 @media (max-width: 979px) {
 .nav-collapse .nav > li > a {
  color: #FFF;
