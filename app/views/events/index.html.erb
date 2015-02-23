@@ -7,6 +7,26 @@
 		<p>Events at which GalbraithWight is exhibiting, chairing, or attending as delegate.</p>
 	</div>
 </div>
+
+	<div class="container">
+      <div class="row">
+        <div class="span12">
+          <div id="flex-clients" class="flexslider">
+            <ul class="slides">
+              <li class="item"> <%= image_tag "ISPOR.jpg" %> </li>
+              <li class="item"> <%= image_tag "World_Congress.png" %> </li>
+              <li class="item"> <%= image_tag "Pharma_Pricing.png" %> </li>
+              <li class="item"> <%= image_tag "Pharma_Pricing_2.png" %> </li>
+              <li class="item"> <%= image_tag "ASCO.jpg" %> </li>
+              <li class="item"> <%= image_tag "HTAi.jpg" %> </li>
+              <li class="item"> <%= image_tag "AACR.jpg" %> </li>
+              <li class="item"> <%= image_tag "ESC.jpg" %> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
 <div class="row">
 	<% cache("google_calendar_feed", :expires_in => 1.hour) do %>
 		<%= render_calendar_feed(0,7) %>
