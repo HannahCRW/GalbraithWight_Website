@@ -55,3 +55,5 @@ gem 'tinymce-rails'
 gem 'sqlite3',  group: :development
 
 gem 'pg'
+
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'

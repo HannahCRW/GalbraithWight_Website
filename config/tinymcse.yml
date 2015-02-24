@@ -1,5 +1,6 @@
 toolbar:
-  - styleselect | bold italic | undo redo
+  - styleselect | bold italic | undo redo 
   - link
 plugins:
   - link
+  - "uploadimage"
