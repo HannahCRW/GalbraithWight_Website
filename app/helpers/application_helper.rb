@@ -14,9 +14,9 @@ end
 module ApplicationHelper
 
   def latest_articles(take = nil)
-    return Article.order(:created_at).take(take) unless take.nil?
-    return Article.order(:created_at)
-  end    
+    return Article.order(:created_at).reverse.take(take) unless take.nil?
+    return Article.order(:created_at).reverse
+  end
 
   def render_calendar_feed(from,to)
     url = "https://www.google.com/calendar/feeds/galbraithwight%40gmail.com/public/basic"
