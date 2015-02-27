@@ -90,35 +90,5 @@
 <script type="text/javascript" src="js/lightbox.js"></script>
 <script type="text/javascript" src="js/jquery.backgroundpos.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript">
-/* services images effects not supported on internet explorer*/
-$(document).ready(function () {
-    var play = 0;
-	if(!$.browser.msie)
-	{
-    $("ul[data-liffect] li").shuffleElements().each(function (i) {
-        $(this).attr("style", "-webkit-animation-delay:" + i * 600 + "ms;"
-                + "-moz-animation-delay:" + i * 600 + "ms;"
-                + "-o-animation-delay:" + i * 600 + "ms;"
-                + "animation-delay:" + i * 600 + "ms;");
-        play++;
-        if (play == $("ul[data-liffect] li").size()) {
-            $("ul[data-liffect]").addClass("play")
-        }
-    });
-	}
-	else
-	{
-		$("ul[data-liffect]").removeAttr('data-liffect');
-	}
-});
-							
-jQuery.fn.shuffleElements = function () {
-    var o = $(this);
-    for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
-};
-/* end services images effects */
-</script>
 </body>
 </html>
