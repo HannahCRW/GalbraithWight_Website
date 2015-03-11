@@ -3,4 +3,4 @@ toolbar:
   - link
 plugins:
   - link
-  - "uploadimage"
+  - uploadimage
