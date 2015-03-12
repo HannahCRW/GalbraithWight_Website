@@ -38,7 +38,6 @@ gem 'spring',        group: :development
 
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
-
 gem 'twitter-bootstrap-rails', group: :assets
 
 gem "font-awesome-rails"
