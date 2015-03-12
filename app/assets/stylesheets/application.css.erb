@@ -1,3 +1,7 @@
+ //= depend_on_asset "services_bussch.jpg"
+ //= depend_on_asset "services_ble.jpg"
+ //= depend_on_asset "services_imr.jpg"
+ //= depend_on_asset "services_ma.jpg"
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,10 +16,6 @@
  *
  *
  *= require font-awesome
- *= depend_on_asset "services_bussch.jpg"
- *= depend_on_asset "services_ble.jpg"
- *= depend_on_asset "services_imr.jpg"
- *= depend_on_asset "services_ma.jpg"
  */
 
 /*!
@@ -8572,29 +8572,28 @@ border-radius: 0px;
 }
 
 #services_bussch .services_header {
-  
-  background-image:url('<%= asset_path("services_bussch.jpg") %>');
+  background-image:url(asset_path("services_bussch.jpg"));
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 #services_ble .services_header {
-  background-image:url('<%= asset_path("services_ble.jpg") %>');
+  background-image:url(asset_path("services_ble.jpg"));
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 #services_imr .services_header {
-  background-image:url('<%= asset_path("services_imr.jpg") %>');
+  background-image:url(asset_path("services_imr.jpg"));
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;  
 }
 
 #services_ma .services_header {
-  background-image:url('<%= asset_path("services_ma.jpg") %>');
+  background-image:url(asset_path("services_ma.jpg"));
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
