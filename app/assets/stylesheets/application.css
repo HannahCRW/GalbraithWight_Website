@@ -8560,6 +8560,7 @@ border-radius: 0px;
   margin: 10px 0;
   position: relative;
   min-width: 320px;
+  overflow: hidden;
 }
 
 .services_header h4 {
