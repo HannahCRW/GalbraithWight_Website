@@ -8539,3 +8539,59 @@ border-radius: 0px;
 .thumbnails > li {
     margin-left: 0px;
 }
+
+
+
+
+  
+/* === Page Services=== */
+.services_header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 350px;
+  background: #ddd;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.services_header h4 {
+  color: #fff;
+  background-color: rgba(43,78,114,0.8);
+  padding: 10px 20px;
+  line-height: 1.3;
+  top: 250px;
+  position: relative;
+  margin: 0 30px;
+}
+
+#services_bussch .services_header {
+  background-image:url('../images/services_bussch.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#services_ble .services_header {
+  background-image:url('../images/services_ble.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#services_imr .services_header {
+  background-image:url('../images/services_imr.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;  
+}
+
+#services_ma .services_header {
+  background-image:url('../images/services_ma.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* === End Page Services === */
+  
