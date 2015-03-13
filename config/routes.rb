@@ -39,6 +39,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  post '/tinymce_assets' => 'tinymce_assets#create'
+
 
   root 'home#index'
 
