@@ -85,7 +85,7 @@
       <% latest_articles(4).each do | article | %>
         <div class="span3 section-box">
           <h3 class="article_title"><%= article.title %></h3>
-          <p class="article_text"><%= article.text.first(140) %>...</p>
+          <p class="article_text"><%= article.text.strip_tags.truncate(140, separator: ' ') %></p>
           <%= link_to 'read more', article_path(article) %>
       </div>
 
