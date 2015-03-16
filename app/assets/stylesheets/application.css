@@ -7873,6 +7873,12 @@ margin-top:20px;
 	margin: 15px 0px 15px 0px;
 }
 
+#flex-clients .flex-direction-nav .flex-prev,
+#flex-clients .flex-direction-nav .flex-next {
+  height:155px;
+  margin-top: -80px;  
+}
+
 /* === End Home Page === */
 
 /* === Services Page === */
