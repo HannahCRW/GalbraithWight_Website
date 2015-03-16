@@ -9,6 +9,10 @@ class String
 
     match.captures[0]
   end
+
+  def strip_tags
+    ActionController::Base.helpers.strip_tags(self)
+  end
 end
 
 module ApplicationHelper
