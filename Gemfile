@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+gem 'pg'
+gem 'sqlite3',  group: :development
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,7 +40,6 @@ gem 'spring',        group: :development
 
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
-
 gem 'twitter-bootstrap-rails', group: :assets
 
 gem "font-awesome-rails"
@@ -47,8 +48,6 @@ gem "simple-rss"
 
 gem 'tinymce-rails'
 
-gem 'sqlite3',  group: :development
-
 # gem 'pg'
-
 gem 'tinymce-rails-imageupload', '~> 4.0.16.beta'
+gem 'paperclip'

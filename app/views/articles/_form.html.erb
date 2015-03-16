@@ -16,7 +16,10 @@
 	<p class="article_text">
 		<%= f.label :text %><br>
 		<%= f.text_area :text, :class => "tinymce"%><br>
-		<%= tinymce :theme => "modern" %>
+		<%= tinymce :theme => "modern", 
+		:relative_urls => false,
+		:remove_script_host => false,
+		:document_base_url => (!request.url ? request.protocol + request.host : request.url) + "/" %>
 	</p>
 	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	<p>

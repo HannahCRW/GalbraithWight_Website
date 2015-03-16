@@ -35,10 +35,12 @@ Rails.application.routes.draw do
 
   get 'news', to: 'news#index'
 
+  match 'tinymce_assets' => 'tinymce_assets#create', via: [:get, :post]
+  
+
   resources :articles do
     resources :comments
   end
-
 
   root 'home#index'
 

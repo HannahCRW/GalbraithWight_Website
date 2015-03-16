@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20150219105123) do
     t.datetime "updated_at"
   end
 
+  create_table "images", force: true do |t|
+    t.string   "alt_text",          default: ""
+    t.string   "hint",              default: ""
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 

@@ -12,6 +12,10 @@
  *
  *
  *= require font-awesome
+ *= depend_on_asset "services_bussch.jpg"
+ *= depend_on_asset "services_ble.jpg"
+ *= depend_on_asset "services_imr.jpg"
+ *= depend_on_asset "services_ma.jpg"
  */
 
 /*!
@@ -23,6 +27,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+
 
 article,
 aside,
@@ -8539,3 +8544,45 @@ border-radius: 0px;
 .thumbnails > li {
     margin-left: 0px;
 }
+
+
+
+
+  
+/* === Page Services=== */
+.services_header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 350px;
+  background: #ddd;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.services_header h4 {
+  color: #fff;
+  background-color: rgba(43,78,114,0.8);
+  padding: 10px 20px;
+  line-height: 1.3;
+  bottom: 20px;
+  position: absolute;
+  margin: 0 30px;
+}
+
+.services_header img {
+  width: 1170px;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -585px;
+  max-width: inherit;
+}
+
+
+/* === End Page Services === */
+  
