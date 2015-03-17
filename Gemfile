@@ -48,6 +48,9 @@ gem "simple-rss"
 
 gem 'tinymce-rails'
 
-# gem 'pg'
 gem 'tinymce-rails-imageupload', '~> 4.0.16.beta'
 gem 'paperclip'
+
+# Handling the contact form
+gem 'mail_form'
+gem 'simple_form'
