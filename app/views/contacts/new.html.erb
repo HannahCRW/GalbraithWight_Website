@@ -12,15 +12,15 @@
       <!-- start: Contact Form -->
       <div id="contact-form">
         <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-          <%= f.input :name, :required => true %>
-          <%= f.input :email, :required => true %>
-          <%= f.input :message, :as => :text, :required => true %>
+          <%= f.input :name, :required => true, :class => 'input-xxlarge' %>
+          <%= f.input :email, :required => true, :class => 'input-xxlarge' %>
+          <%= f.input :message, :as => :text,, :class => 'input-xxlarge' :required => true %>
           <div class= "hidden">
             <%= f.input :nickname, :hint => 'Leave this field blank!' %>
           </div>
           <div>
             </br>
-            <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+            <%= f.button :submit, 'Send message', :class=> "metro" %>
           </div>
         <% end %>
       </div>
