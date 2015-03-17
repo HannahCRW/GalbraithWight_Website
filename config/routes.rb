@@ -33,7 +33,8 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
   match '/contacts', to: 'contacts#new', via: 'get'
-  resources "contacts", only: [:new, :create]
+  resources 'contacts', only: [:new, :create]
+  resources :contacts
 
 
   get 'news', to: 'news#index'
