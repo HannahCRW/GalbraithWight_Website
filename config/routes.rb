@@ -26,8 +26,6 @@ Rails.application.routes.draw do
 
   get 'ble/cs'
 
-  get 'static/contact'
-
   get 'static/sitemap'
 
   get '/auth/:provider/callback', to: 'sessions#create'
