@@ -11,14 +11,27 @@
       </div>
       <!-- start: Contact Form -->
       <div id="contact-form">
-		<div>
+		<div class="feedback">
 		  <% flash.each do |key, value| %>
-		    <div class="alert-<%= key %>">
+		    <div class="alert alert-<%= key %>">
 		      <a href="#" data-dismiss="alert">×</a>
 		        <%= value %>
 		    </div>
 		  <% end %>
 		</div>
+
+		<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+          <%= f.input :name, :required => true, :class => 'input-xxlarge' %>
+          <%= f.input :email, :required => true, :class => 'input-xxlarge' %>
+          <%= f.input :message, :as => :text, :required => true, :class => 'input-xxlarge' %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div>
+            </br>
+            <%= f.button :submit, 'Send message', :class=> "metro" %>
+          </div>
+        <% end %>
       </div>
     </div>
     

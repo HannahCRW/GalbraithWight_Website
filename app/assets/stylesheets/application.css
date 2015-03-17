@@ -7401,7 +7401,14 @@ html[xmlns] .slides {
 }
 
 
- /*flash*/
+ /*flash
+.alert {
+  padding: 3px 8px;
+  webkit-border-radius: 5px;
+  moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 .alert-error {
 background-color: #f2dede;
 border-color: #eed3d7;
@@ -7429,7 +7436,7 @@ border-color: #d6e9c6;
 color: #468847;
 text-align: left;
 }
-
+*/
 
  .plan_features:nth-child(odd){
     background: none repeat scroll 0 0 #CCDBB3;
