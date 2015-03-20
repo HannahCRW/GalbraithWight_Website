@@ -4,10 +4,12 @@ class TinymceAssetsController < ApplicationController
   def create
 
     geometry = Paperclip::Geometry.from_file params[:file]
-    image    = Image.create params.permit(:file, :alt, :hint)
+    image    = Image.create params
 
     render json: {
-      text: "Adding in Image"
+      url:  URI.join(request.protocol, request.host_with_port, image.file.url),
+      height: geometry.height.to_i,
+      width:  geometry.width.to_i
     }, layout: false, content_type: "text/html"
   end
 end
