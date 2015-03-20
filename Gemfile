@@ -46,10 +46,11 @@ gem "font-awesome-rails"
 
 gem "simple-rss"
 
+# TinyMCE & Content Management plugins
 gem 'tinymce-rails'
-
 gem 'tinymce-rails-imageupload', '~> 4.0.16.beta'
 gem 'paperclip'
+
 
 # Handling the contact form
 gem 'mail_form'

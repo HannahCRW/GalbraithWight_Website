@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 
   get 'news', to: 'news#index'
 
-  match 'tinymce_assets' => 'tinymce_assets#create', via: [:get, :post]
+  post '/tinymce_assets' => 'tinymce_assets#create'
   
 
   resources :articles do
