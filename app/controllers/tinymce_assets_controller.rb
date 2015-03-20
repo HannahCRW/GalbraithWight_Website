@@ -3,16 +3,15 @@ class TinymceAssetsController < ApplicationController
 
   def create
     
-   # geometry = Paperclip::Geometry.from_file params[:file]
-   # image    = Image.create params.permit(:file, :alt, :hint)
+    geometry = Paperclip::Geometry.from_file params[:file]
+    image    = Image.create params.permit(:file, :alt, :hint)
 
     render json: {
-     # image: {
-    #    url:  URI.join(request.protocol, request.host_with_port, image.file.url),
-    #    height: geometry.height.to_i,
-    #    width:  geometry.width.to_i
-    #  }
-    text : "Testing"
+      image: {
+        url:  URI.join(request.protocol, request.host_with_port, image.file.url),
+        height: geometry.height.to_i,
+        width:  geometry.width.to_i
+      }
     }, layout: false, content_type: "text/html"
   end
 end
