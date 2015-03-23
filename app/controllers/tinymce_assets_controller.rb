@@ -7,7 +7,7 @@ class TinymceAssetsController < ApplicationController
 
     render json: {
       image: {
-        text: "Test: Adding Image.create call back in",
+        text: "Test: Adding attachment validation explicitly to paperclip.",
       }
     }, layout: false, content_type: "text/html"
   end
