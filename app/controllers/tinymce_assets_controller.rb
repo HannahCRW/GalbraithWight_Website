@@ -12,4 +12,5 @@ class TinymceAssetsController < ApplicationController
         width:  geometry.width.to_i
       }
     }, layout: false, content_type: "text/html"
+  end
 end
