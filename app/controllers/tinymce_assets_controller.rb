@@ -7,8 +7,7 @@ class TinymceAssetsController < ApplicationController
 
     render json: {
       avar: {
-        text: "Back to Testing",
-        url:    image.file.url 
+        text: "Test: No Image call. Removed all JSON arguments"
       }
     }, layout: false, content_type: "text/html"
   end
