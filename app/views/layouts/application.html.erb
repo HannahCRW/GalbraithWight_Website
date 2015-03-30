@@ -11,6 +11,10 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <link href='//fonts.googleapis.com/css?family=Ubuntu:400,500,300italic|Oxygen' rel='stylesheet' type='text/css'>
   
+  <% if content_for?(:head) %>
+    <%= yield(:head) %>
+  <% end %>
+
 </head>
 <body 
   <% if content_for?(:body_attributes) %>
