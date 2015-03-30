@@ -790,7 +790,7 @@ h3, .asH3 {
   font-size: 24.5px;
 }
 
-h4 {
+h4, .asH4 {
   font-size: 17.5px;
 }
 
@@ -817,7 +817,7 @@ h3 small, .asH3 small {
   font-size: 14px;
 }
 
-h4 small {
+h4 small, .asH4 small {
   font-size: 14px;
 }
 
@@ -7565,7 +7565,7 @@ body {
 	height: 100%;
 	overflow-x:hidden;
 }
-h4 {
+h4, .asH4 {
 	color:#2B4E72;
 }
 /* === End Typography === */
@@ -8074,7 +8074,7 @@ transform: scale(1);
 	background-repeat:repeat;
 	border-left:3px solid #5e8cbd;
 }
-h4.section-heading {
+h4.section-heading, .asH4.section-heading {
 	padding:10px 15px 10px 10px;
 }
 p.section-heading{
