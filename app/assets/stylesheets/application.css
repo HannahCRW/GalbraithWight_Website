@@ -821,6 +821,12 @@ h4 small {
   font-size: 14px;
 }
 
+.asStrong {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
 .page-header {
   padding-bottom: 9px;
   margin: 20px 0 30px;
