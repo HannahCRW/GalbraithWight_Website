@@ -1,5 +1,7 @@
-<% content_for :title, "GalbraithWight Pharmaceutical Consultantcy Services | Market Access | Brand and Launch Excellence | Insight Market Research | Business School" %>
-
+<% content_for :title, "GalbraithWight Pharmaceutical Consultancy Services" %>
+<% content_for :head do %>
+  <meta name="description" content="GalbraithWight consultancy services can be grouped into Market Access,Insight Market Research,Brand & Launch Excellence and healthcare industry training." />
+<% end %>
 <body>
 <!-- Horizontal line -->
 <div id="header-line"></div>
@@ -21,33 +23,33 @@
           <p>If you feel any of these services would add value to your organisation, do <%= link_to "get in touch", static_contact_path %></p>
         </blockquote></div>
     </div>
-            <h3>Our services</h3>
+            <h1 class="asH3">Our Consultancy Services</h1>
             <div class="row-fluid">
               <div class="span10 prettyprint">
                 <div class="span2"> <%= image_tag 'alt_favicon.png', class: "pull-left" %> </div>
                 <div class="span10">
-                  <h5><%= link_to "Market Access", "/ma/services" %></h5>
+                  <h2 class="asH5"><%= link_to "Market Access", "/ma/services" %></h2>
                   <p>Global Market Access is the single most important determinant of commercial success for healthcare companies today, and the biggest hurdle to be overcome in the delivery of the latest advancements in care to patients.</p>
                 </div>
               </div>
               <div class="span10 prettyprint"style="margin-left:0px;">
                 <div class="span2"> <%= image_tag 'alt_favicon.png', class: "pull-left" %> </div>
                 <div class="span10">
-                  <h5><%= link_to "Insight Market Research", "/imr/services" %></h5>
+                  <h2 class="asH5"><%= link_to "Insight Market Research", "/imr/services" %></h2>
                   <p>Our Insight Market Research programme arms you with the knowledge and insights to launch your new brand successfully. We help our clients answer their critical Market Access questions so that risk is minimised and patients can receive the innovative new care they need as quickly as possible.</p>
                 </div>
               </div>
               <div class="span10 prettyprint"style="margin-left:0px;">
                 <div class="span2"> <%= image_tag 'alt_favicon.png', class: "pull-left" %> </div>
                 <div class="span10">
-                  <h5><%= link_to "Brand & Launch Excellence", "/ble/services" %></h5>
+                  <h2 class="asH5"><%= link_to "Brand & Launch Excellence", "/ble/services" %></h2>
                   <p>The successful launch of any new pharmaceutical brand must take into account the critical dimensions of brand, company and market. But most importantly of all, a coherent Market Access strategy must lie at the heart of all business and brand planning.</p>
                 </div>
               </div>
               <div class="span10 prettyprint"style="margin-left:0px;">
                 <div class="span2"> <%= image_tag 'alt_favicon.png', class: "pull-left" %> </div>
                 <div class="span10">
-                  <h5><%= link_to "GalbraithWight Business School", "/bussch/services" %></h5>
+                  <h2 class="asH5"><%= link_to "GalbraithWight Business School", "/bussch/services" %></h2>
                   <p>Positive reinforcement and continual learning is the key to long-term success. This is why we founded the GalbraithWight Business School, so that those working in the healthcare industry can benefit from new knowledge and skills which will continue to deliver value to their organisation long after we’ve finished our engagement with them.</p>
                 </div>
               </div>
