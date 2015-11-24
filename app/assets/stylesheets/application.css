@@ -7854,7 +7854,9 @@ margin-top:20px;
 /* === Latest news Section === */
 
 .article_title {
-  height: 75px;
+	
+  /* Removed by West End to prevent overlap of title on home page */
+  /* height: 75px; */ 
 }
 
 .article_text {
