@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'ble/services'
 
+  get 'ble/services2'
+
   get 'ble/cs'
 
   get 'static/contact'
