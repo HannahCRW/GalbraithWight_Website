@@ -7758,7 +7758,8 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .carousel-caption {
 	
 	height:80px;
-	width:60%;
+	/* Was not enough space for the business school text in the carousel */
+	/*width:60%;*/
 	margin: 10px;
 	right:20px;
 }
