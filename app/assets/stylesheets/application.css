@@ -786,17 +786,20 @@ h2 {
   font-size: 31.5px;
 }
 
-h3 {
+h3, .asH3 {
   font-size: 24.5px;
 }
 
-h4 {
+h4, .asH4 {
   font-size: 17.5px;
 }
 
-h5 {
+h5, .asH5 {
   font-size: 14px;
+  line-height:20px;
 }
+
+
 
 h6 {
   font-size: 11.9px;
@@ -810,12 +813,18 @@ h2 small {
   font-size: 17.5px;
 }
 
-h3 small {
+h3 small, .asH3 small {
   font-size: 14px;
 }
 
-h4 small {
+h4 small, .asH4 small {
   font-size: 14px;
+}
+
+.asStrong {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
 }
 
 .page-header {
@@ -1316,6 +1325,10 @@ textarea::-webkit-input-placeholder {
 
 .input-xxlarge {
   width: 530px;
+}
+
+div.input {
+  margin:0 0 20px;
 }
 
 input[class*="span"],
@@ -7401,8 +7414,42 @@ html[xmlns] .slides {
 }
 
 
- 
+ /*flash
+.alert {
+  padding: 3px 8px;
+  webkit-border-radius: 5px;
+  moz-border-radius: 5px;
+  border-radius: 5px;
+}
 
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+*/
 
  .plan_features:nth-child(odd){
     background: none repeat scroll 0 0 #CCDBB3;
@@ -7518,7 +7565,7 @@ body {
 	height: 100%;
 	overflow-x:hidden;
 }
-h4 {
+h4, .asH4 {
 	color:#2B4E72;
 }
 /* === End Typography === */
@@ -7711,7 +7758,8 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .carousel-caption {
 	
 	height:80px;
-	width:60%;
+	/* Was not enough space for the business school text in the carousel */
+	/*width:60%;*/
 	margin: 10px;
 	right:20px;
 }
@@ -7807,7 +7855,9 @@ margin-top:20px;
 /* === Latest news Section === */
 
 .article_title {
-  height: 75px;
+	
+  /* Removed by West End to prevent overlap of title on home page */
+  /* height: 75px; */ 
 }
 
 .article_text {
@@ -8027,7 +8077,7 @@ transform: scale(1);
 	background-repeat:repeat;
 	border-left:3px solid #5e8cbd;
 }
-h4.section-heading {
+h4.section-heading, .asH4.section-heading {
 	padding:10px 15px 10px 10px;
 }
 p.section-heading{

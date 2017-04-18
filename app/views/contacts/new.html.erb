@@ -1,0 +1,90 @@
+<% content_for :title, "Contact GalbraithWight in the UK, Europe and the USA." %>
+
+<% content_for :head do %>
+  <meta name="description" content="Contact GalbraithWight for your Global Pharmaceutical Market Access Consultancy needs at any of our locations in the UK, Europe and the USA." />
+<% end %>
+
+<div id="main" class="container">
+    <div id="map_canvas" class="img-polaroid" style="height:409px;width:108%;margin-left:-52px;margin-bottom:20px"></div>
+
+  <div class="row">
+    <div class="span8">
+      <div class="title">
+        <h3>Contact Form</h3>
+      </div>
+      <!-- start: Contact Form -->
+      <div id="contact-form">
+        <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+          <%= f.input :name, :required => true, :input_html => {:class => 'input-xxlarge'} %>
+          <%= f.input :email, :required => true, :input_html => {:class => 'input-xxlarge'} %>
+          <%= f.input :message, :as => :text, :required => true, :input_html => {:class => 'input-xxlarge'} %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div>
+            </br>
+            <%= f.button :submit, 'Send message', :class=> "btn metro" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    
+    <div class="span4">
+      <div class="title">
+        <h3>Contact Info</h3>
+      </div>
+      <div>
+        <p><i class="fa fa-home"></i> <b>GalbraithWight UK</b> </p>
+        <p> A6 Chaucer Business Park, Ditton's Road, Polegate  BN26 6QH, UK </p>
+        <p><i class="fa fa-phone"></i> +44(0)1323 482 208 </p>
+        <p><i class="fa fa-fax"></i> +44(0)1323 482 287 </p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:info@galbraithwight.com">info@galbraithwight.com</a> </p>
+      </div>
+      <br />
+      <div>
+        <p><i class="fa fa-home"></i>  <b>GalbraithWight USA</b> </p>
+        <p> 148 Fairway Drive, Princeton, NJ 08540, USA </p>
+        <p><i class="fa fa-phone"></i> +1 609 924 5486 </p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:info@galbraithwight.com">info@galbraithwight.com</a> </p>
+      </div>
+      <br />
+      <div>
+        <p><i class="fa fa-home"></i>  <b>GalbraithWight Italy</b> </p>
+        <p> Milanofiori, Strada 6, Assago, <br />Edificio A, Scala 13, Piano 1, <br /> 20090 Milano, Italy</p>
+        <p><i class="fa fa-phone"></i> +39 342 1487703 </p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:C.Pellegrini@galbraithwight.com">C.Pellegrini@galbraithwight.com</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      var locations = [
+          ['GalbraithWight UK', 50.81854, 0.2697725, 3],
+          ['GalbraithWight USA', 40.3754944, -74.6642009, 2],
+          ['GalbraithWight Europe', 45.4039839, 9.1513578, 1]
+      ];
+      var map = new google.maps.Map(document.getElementById('map_canvas'), {
+          zoom: 4,
+          center: new google.maps.LatLng(48, -35),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      var infowindow = new google.maps.InfoWindow();
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+              map: map
+          });
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                  infowindow.setContent(locations[i][0]);
+                  infowindow.open(map, marker);
+              }
+          })(marker, i));
+      }
+  });
+</script>

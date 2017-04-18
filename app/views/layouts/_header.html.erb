@@ -4,7 +4,7 @@
     <!-- Logo and slogan -->
     <div id="brand">
       <div id="logo" class="brand">
-      	<%= link_to (image_tag "GW_logo_rethinking.png", :class => "gwlogorethinking"), "/" %>
+      	<%= link_to (image_tag "GW_logo_rethinking.png", {:class => "gwlogorethinking", :alt=>"GalbraithWight logo"}), "/" %>
       </div>
       <div id="slogan" class="hidden-phone">Global Market Access</div>
     </div>
@@ -14,10 +14,10 @@
       <ul class="nav pull-right hidden-phone hidden-tablet">
       	<li> <%= link_to "Home", "/" %> </li>
       	<li> <%= link_to "Services", static_serviceset_path %> </li>
-        <li> <%= link_to "Events",  events_index_path  %> </li>
+        <!-- <li> <%= link_to "Events",  events_index_path  %> </li> -->
         <li> <%= link_to "News", news_path %> </li>
         <li> <%= link_to "About Us", about_overview_path %> </li>
-      	<li> <%= link_to "Contact Us", static_contact_path %> </li>
+      	<li> <%= link_to "Contact Us", contacts_path %> </li>
       </ul>
     </div>
     <!-- end desktop menu -->
@@ -34,10 +34,10 @@
               <ul class="dropdown-menu">
                 <li> <%= link_to "Home", "/" %> </li>
                 <li> <%= link_to "Services", static_serviceset_path %> </li>
-                <li> <%= link_to "Events",  events_index_path  %> </li>
+                <!--<li> <%= link_to "Events",  events_index_path  %> </li> -->
                 <li> <%= link_to "News", news_path %> </li>
                 <li> <%= link_to "About Us", about_overview_path %> </li>
-                <li> <%= link_to "Contact Us", static_contact_path %> </li>
+                <li> <%= link_to "Contact Us", contacts_path %> </li>
               </ul>
             </div>
           </div>

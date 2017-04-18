@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.4'
 gem 'pg'
 gem 'sqlite3',  group: :development
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -46,8 +47,12 @@ gem "font-awesome-rails"
 
 gem "simple-rss"
 
+# TinyMCE & Content Management plugins
 gem 'tinymce-rails'
-
-# gem 'pg'
 gem 'tinymce-rails-imageupload', '~> 4.0.16.beta'
 gem 'paperclip'
+
+
+# Handling the contact form
+gem 'mail_form'
+gem 'simple_form'

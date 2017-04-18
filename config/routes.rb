@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'ble/services'
 
+  get 'ble/services2'
+
   get 'ble/cs'
 
   get 'static/contact'
@@ -32,11 +34,14 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
+  match '/contacts', to: 'contacts#new', via: 'get'
+  resources 'contacts', only: [:new, :create]
+  resources :contacts
+
 
   get 'news', to: 'news#index'
 
-  match 'tinymce_assets' => 'tinymce_assets#create', via: [:get, :post]
-  
+  match '/tinymce_assets' => 'tinymce_assets#create', via: [:get, :post]
 
   resources :articles do
     resources :comments
